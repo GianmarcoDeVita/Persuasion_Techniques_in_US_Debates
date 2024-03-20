@@ -1,7 +1,7 @@
 import argparse
 from ruamel.yaml import YAML
 
-def remove_empty_new_lines(opt, params):
+def remove_orphan_new_lines(opt, params):
     with open(opt.data, 'r') as file:
         lines = file.readlines()
 
@@ -31,7 +31,7 @@ def main():
     with open(opt.params) as f:
         yaml = YAML(typ="safe")
         params = yaml.load(f) 
-    remove_empty_new_lines(opt, params)
+    remove_orphan_new_lines(opt, params)
 
     
 

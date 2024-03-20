@@ -11,3 +11,14 @@ stages:
         - data/without_topics/${item}
       params:
         - topics
+  remove_orphan_new_lines:
+    foreach: ${speeches}
+    do:
+      cmd: python src/dvc_steps/remove_orphan_new_lines.py --data data/without_topics/${item} --dest data/no_orphans/${item} --params params.yaml --topics topics
+      deps:
+        - src/dvc_steps/remove_topics.py
+        - data/raw/${item}
+      outs:
+        - data/without_topics/${item}
+      params:
+        - topics
