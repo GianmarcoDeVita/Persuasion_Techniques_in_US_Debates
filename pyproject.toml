@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "persuasion-techniques-in-us-debates"
+version = "0.1.0"
+description = ""
+authors = ["devitg <g.devita7@campus.unimib.it>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+dvc = "^3.30.3"
+dvc-gdrive = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
