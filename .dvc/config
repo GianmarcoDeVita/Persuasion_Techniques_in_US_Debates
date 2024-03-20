@@ -1,0 +1,5 @@
+[core]
+    remote = gdrive_default
+['remote "gdrive_default"']
+    url = gdrive://1MZRYcKyUw9yKmJAPYgtPPcSya_ehgiy4
+    gdrive_user_credentials_file = google_drive_credentials.json
