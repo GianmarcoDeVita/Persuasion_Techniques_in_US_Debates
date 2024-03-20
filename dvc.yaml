@@ -1,0 +1,13 @@
+
+stages:
+  remove_topics:
+    foreach: ${speeches}
+    do:
+      cmd: python src/dvc_steps/remove_topics.py --data data/raw/${item} --dest data/without_topics/${item} --params params.yaml --topics topics
+      deps:
+        - src/dvc_steps/remove_topics.py
+        - data/raw/${item}
+      outs:
+        - data/without_topics/${item}
+      params:
+        - topics
