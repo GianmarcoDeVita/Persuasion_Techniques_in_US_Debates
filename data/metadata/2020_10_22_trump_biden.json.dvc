@@ -1,0 +1,5 @@
+outs:
+- md5: 2a45e1ff8215fa407bb20712915bcbdb
+  size: 880
+  hash: md5
+  path: 2020_10_22_trump_biden.json
