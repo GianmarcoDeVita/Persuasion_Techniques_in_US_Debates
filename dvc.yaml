@@ -32,3 +32,14 @@ stages:
         - data/metadata/${item}.json
       outs:
         - data/no_orphan_lines/${item}.txt
+
+  split_candidate:
+    foreach: ${speeches}
+    do:
+      cmd: python src/split_candidate.py --data data/no_orphan_lines/${item}.txt --dest data/speeches/${item}.json --metadata data/metadata/${item}.json
+      deps:
+        - src/split_candidate.py
+        - data/no_orphan_lines/${item}.txt
+        - data/metadata/${item}.json
+      outs:
+        - data/speeches/${item}.json

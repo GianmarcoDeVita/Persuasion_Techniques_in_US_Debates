@@ -1,13 +1,15 @@
 import argparse
 import json
-
+import os
 def remove_orphan_new_lines(opt):
     with open(opt.data, 'r') as file:
         lines = file.readlines()
     #read metadata file
     with open(opt.metadata, 'r') as file:
         metadata = json.load(file)
-
+    #create output folder if it does not exist
+    folder_dest = opt.dest.split('/')[:-1]
+    os.makedirs('/'.join(folder_dest), exist_ok=True)
     candidates_names = list(map(lambda x: x["speech_candidate_id"],metadata["candidates"]))
 
     #check if a line do not start with any of the candidates names

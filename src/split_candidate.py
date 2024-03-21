@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 
 def split_candidate(opt):
     with open(opt.data, 'r') as file:
@@ -17,11 +18,14 @@ def split_candidate(opt):
                 line = line.replace(candidate_name.strip(), '')
                 candidate_lines.append(line)
         candidate_text = '\n'.join(candidate_lines)
-        output_json["candidates"][candidate]["text"] = candidate_text
+        candidate["text"] = candidate_text
     
+    #create output folder if it does not exist
+    folder_dest = opt.dest.split('/')[:-1]
+    os.makedirs('/'.join(folder_dest), exist_ok=True)
     #save output json
     with open(opt.dest, 'w') as file:
-        json.dump(output_json, file)
+        json.dump(output_json, file ,ensure_ascii=False,indent=4)
 
 
 def parse_arguments():

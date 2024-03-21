@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 
 def uniform_candidate_names(opt):
     with open(opt.data, 'r') as file:
@@ -7,7 +8,9 @@ def uniform_candidate_names(opt):
     #read metadata file
     with open(opt.metadata, 'r') as file:
         metadata = json.load(file)
-
+    #create output folder if it does not exist
+    folder_dest = opt.dest.split('/')[:-1]
+    os.makedirs('/'.join(folder_dest), exist_ok=True)
     for candidate in metadata["candidates"]:
         old_name = candidate["candidate_raw_name"]
         new_name = candidate["speech_candidate_id"]
