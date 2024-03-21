@@ -1,28 +1,21 @@
 import argparse
-import os
 import json
-def remove_topics(opt):
+
+def uniform_candidate_names(opt):
+    with open(opt.data, 'r') as file:
+        lines = file.readlines()
     #read metadata file
     with open(opt.metadata, 'r') as file:
         metadata = json.load(file)
 
-    topics = metadata["topics"]
-    topics_stripped = [topic.strip() for topic in topics]
-
-    #get folder from output file
-    folder_dest = opt.dest.split('/')[:-1]
-    os.makedirs('/'.join(folder_dest), exist_ok=True)
-
-    with open(opt.data, 'r') as file:
-        lines = file.readlines()
+    for candidate in metadata["candidates"]:
+        old_name = candidate["candidate_raw_name"]
+        new_name = candidate["speech_candidate_id"]
+        for i in range(len(lines)):
+            lines[i] = lines[i].replace(old_name, new_name)
     with open(opt.dest, 'w') as file:
         for line in lines:
-            if line.strip() in topics_stripped:
-                continue
-            if line =='\n':
-                continue
             file.write(line)
-    print(f"Uniformed dataset saved to {opt.dest}")
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -34,7 +27,7 @@ def parse_arguments():
 
 def main():
     opt = parse_arguments()
-    remove_topics(opt)
+    uniform_candidate_names(opt)
 
     
 

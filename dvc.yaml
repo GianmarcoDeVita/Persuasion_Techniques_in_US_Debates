@@ -3,11 +3,32 @@ stages:
   remove_topics:
     foreach: ${speeches}
     do:
-      cmd: python src/remove_topics.py --data data/raw/${item}.txt --dest data/without_topics/${item}.txt --params params.yaml --topics topics
+      cmd: python src/remove_topics.py --data data/raw/${item}.txt --dest data/without_topics/${item}.txt --metadata data/metadata/${item}.json
       deps:
         - src/remove_topics.py
         - data/raw/${item}.txt
+        - data/metadata/${item}.json
       outs:
         - data/without_topics/${item}.txt
-      params:
-        - topics
+
+  uniform_candidate_names:
+    foreach: ${speeches}
+    do:
+      cmd: python src/uniform_candidate_names.py --data data/without_topics/${item}.txt --dest data/uniformed/${item}.txt --metadata data/metadata/${item}.json
+      deps:
+        - src/uniform_candidate_names.py
+        - data/without_topics/${item}.txt
+        - data/metadata/${item}.json
+      outs:
+        - data/uniformed/${item}.txt
+
+  remove_orphan_new_lines:
+    foreach: ${speeches}
+    do:
+      cmd: python src/remove_orphan_new_lines.py --data data/uniformed/${item}.txt --dest data/no_orphan_lines/${item}.txt --metadata data/metadata/${item}.json
+      deps:
+        - src/remove_orphan_new_lines.py
+        - data/uniformed/${item}.txt
+        - data/metadata/${item}.json
+      outs:
+        - data/no_orphan_lines/${item}.txt

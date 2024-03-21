@@ -1,11 +1,14 @@
 import argparse
-from ruamel.yaml import YAML
+import json
 
-def remove_orphan_new_lines(opt, params):
+def remove_orphan_new_lines(opt):
     with open(opt.data, 'r') as file:
         lines = file.readlines()
+    #read metadata file
+    with open(opt.metadata, 'r') as file:
+        metadata = json.load(file)
 
-    candidates_names = params[opt.candidates_param]
+    candidates_names = list(map(lambda x: x["speech_candidate_id"],metadata["candidates"]))
 
     #check if a line do not start with any of the candidates names
     new_lines = []
@@ -15,23 +18,22 @@ def remove_orphan_new_lines(opt, params):
         else:
             #otherwise the line should be appended to the last line after a space
             new_lines[-1] = new_lines[-1].strip() + ' ' + line.strip()
+    with open(opt.dest, 'w') as file:
+        for line in new_lines:
+            file.write(line)
     
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data/dataset.csv', help='source')
-    parser.add_argument('--dest', type=str, default='data/uniformed_dataset.csv', help='destination')
-    parser.add_argument('--params', type=str, default='params.yaml', help='params')  # file/folder, 0 for webcam
-    parser.add_argument('--candidates_param', type=str, default='trump_biden', help='parameter containing candidates names')
+    parser.add_argument('--data', type=str, default='data/raw/speech.txt', help='source')
+    parser.add_argument('--dest', type=str, default='data/without_topics/speech.txt', help='destination')
+    parser.add_argument('--metadata', type=str, default='data/metadata/speech.json', help='metadata')
     opt = parser.parse_args()
     return opt
 
 def main():
     opt = parse_arguments()
-    with open(opt.params) as f:
-        yaml = YAML(typ="safe")
-        params = yaml.load(f) 
-    remove_orphan_new_lines(opt, params)
+    remove_orphan_new_lines(opt)
 
     
 
