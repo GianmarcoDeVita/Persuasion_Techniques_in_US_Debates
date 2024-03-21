@@ -1,0 +1,39 @@
+{
+    "year": 2020,
+    "date": "2020-01-01",
+    "debate_name": "2020_trump_biden",
+    "topics":[],
+    "broadcaster": 
+    {
+        "name":"CNN",
+        "all_sides_affiliation":"left"
+    },
+    "candidates":
+    [
+        {
+            "speech_candidate_id":"\nTRUMP: ",
+            "name": "Donald Trump",
+            "party": "Republican",
+            "candidate_raw_name":"\nTRUMP: ",
+            "incumbent": true,
+            "party_incumbent": true,    
+            "winner": false,
+            "home_state": "Florida"
+
+        },
+        {
+            "speech_candidate_id":"\nBIDEN: ",
+            "name": "Joe Biden",
+            "party": "Democrat",
+            "candidate_raw_name":"\nBIDEN: ",
+            "incumbent": false,
+            "party_incumbent": false,
+            "winner": true,
+            "home_state": "Delaware"
+
+        }
+    ]
+
+
+
+}

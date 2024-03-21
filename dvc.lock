@@ -1913,3 +1913,43 @@ stages:
       hash: md5
       md5: f5f24291fd777ac6c6e8700229fdb554
       size: 99798
+  remove_topics@2020_10_22_trump_biden:
+    cmd: python src/remove_topics.py --data data/raw/2020_10_22_trump_biden.txt --dest
+      data/without_topics/2020_10_22_trump_biden.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2020_10_22_trump_biden.txt
+      hash: md5
+      md5: dd80d409a741988939e12063a856413a
+      size: 100151
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2020_10_22_trump_biden.txt
+      hash: md5
+      md5: f5f24291fd777ac6c6e8700229fdb554
+      size: 99798
