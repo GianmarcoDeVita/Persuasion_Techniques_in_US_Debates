@@ -10,12 +10,12 @@ def remove_orphan_new_lines(opt):
     #create output folder if it does not exist
     folder_dest = opt.dest.split('/')[:-1]
     os.makedirs('/'.join(folder_dest), exist_ok=True)
-    candidates_names = list(map(lambda x: x["speech_candidate_id"],metadata["candidates"]))
-
+    candidates_names = list(map(lambda x: x["speech_candidate_id"].strip(),metadata["candidates"]))
+    print(candidates_names)
     #check if a line do not start with any of the candidates names
     new_lines = []
     for line in lines:
-        if line.split(',')[0] not in candidates_names:
+        if line.split(',')[0] in candidates_names:
             new_lines.append(line)
         else:
             #otherwise the line should be appended to the last line after a space
