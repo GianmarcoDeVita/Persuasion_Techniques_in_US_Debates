@@ -636,15 +636,14 @@ stages:
       md5: 1e292f14569ca42ab0bd9b831c4800d9
       size: 88898
   remove_topics@2000_10_11_bush_gore.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2000_10_11_bush_gore.txt
-      --dest data/without_topics/2000_10_11_bush_gore.txt --params params.yaml --topics
-      topics
+    cmd: python src/remove_topics.py --data data/raw/2000_10_11_bush_gore.txt --dest
+      data/without_topics/2000_10_11_bush_gore.txt --params params.yaml --topics topics
     deps:
     - path: data/raw/2000_10_11_bush_gore.txt
       hash: md5
       md5: d1f5ea0e1c7a2637eb30a9c05bbd7257
       size: 89399
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -676,15 +675,14 @@ stages:
       md5: d3aa5128eb2b9f1e932f09bfd826ec06
       size: 89166
   remove_topics@2000_10_17_bush_gore.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2000_10_17_bush_gore.txt
-      --dest data/without_topics/2000_10_17_bush_gore.txt --params params.yaml --topics
-      topics
+    cmd: python src/remove_topics.py --data data/raw/2000_10_17_bush_gore.txt --dest
+      data/without_topics/2000_10_17_bush_gore.txt --params params.yaml --topics topics
     deps:
     - path: data/raw/2000_10_17_bush_gore.txt
       hash: md5
       md5: 207121035c452246408f88d630497e24
       size: 84549
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -716,15 +714,15 @@ stages:
       md5: a827fb3e71578630ba9d7dcc5ca3e0c0
       size: 84381
   remove_topics@2004_09_30_bush_kerry.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2004_09_30_bush_kerry.txt
-      --dest data/without_topics/2004_09_30_bush_kerry.txt --params params.yaml --topics
+    cmd: python src/remove_topics.py --data data/raw/2004_09_30_bush_kerry.txt --dest
+      data/without_topics/2004_09_30_bush_kerry.txt --params params.yaml --topics
       topics
     deps:
     - path: data/raw/2004_09_30_bush_kerry.txt
       hash: md5
       md5: 42bcae9490ac34c971b2e8c06d139bcc
       size: 85144
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -756,15 +754,15 @@ stages:
       md5: a46610ae2d81ff8f6ec7864edbf271e4
       size: 84297
   remove_topics@2004_10_08_bush_kerry.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2004_10_08_bush_kerry.txt
-      --dest data/without_topics/2004_10_08_bush_kerry.txt --params params.yaml --topics
+    cmd: python src/remove_topics.py --data data/raw/2004_10_08_bush_kerry.txt --dest
+      data/without_topics/2004_10_08_bush_kerry.txt --params params.yaml --topics
       topics
     deps:
     - path: data/raw/2004_10_08_bush_kerry.txt
       hash: md5
       md5: 9b6bdca01263ac18da44c8101c1f5b03
       size: 93589
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -796,15 +794,15 @@ stages:
       md5: dbe67811235cbd9dc71412055a8f28dd
       size: 93238
   remove_topics@2004_10_13_bush_kerry.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2004_10_13_bush_kerry.txt
-      --dest data/without_topics/2004_10_13_bush_kerry.txt --params params.yaml --topics
+    cmd: python src/remove_topics.py --data data/raw/2004_10_13_bush_kerry.txt --dest
+      data/without_topics/2004_10_13_bush_kerry.txt --params params.yaml --topics
       topics
     deps:
     - path: data/raw/2004_10_13_bush_kerry.txt
       hash: md5
       md5: 80c54bb2672c75f6803781b12d7de945
       size: 87258
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -836,15 +834,15 @@ stages:
       md5: 2fa372cb48f8c62eb22d985cacaaa72e
       size: 86955
   remove_topics@2008_09_26_mccain_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2008_09_26_mccain_obama.txt
-      --dest data/without_topics/2008_09_26_mccain_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2008_09_26_mccain_obama.txt --dest
+      data/without_topics/2008_09_26_mccain_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2008_09_26_mccain_obama.txt
       hash: md5
       md5: 72ecb02f219fd25d27bf3357e91817ea
       size: 89941
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -876,15 +874,15 @@ stages:
       md5: c5178c32e4e49cde268f56036a95b232
       size: 89460
   remove_topics@2008_10_07_mccain_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2008_10_07_mccain_obama.txt
-      --dest data/without_topics/2008_10_07_mccain_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2008_10_07_mccain_obama.txt --dest
+      data/without_topics/2008_10_07_mccain_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2008_10_07_mccain_obama.txt
       hash: md5
       md5: 84e72fe17d17785f7b4c0582e4799332
       size: 89418
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -916,15 +914,15 @@ stages:
       md5: 216c2d9875c677d612d98d0058ac9ab5
       size: 88936
   remove_topics@2008_10_15_mccain_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2008_10_15_mccain_obama.txt
-      --dest data/without_topics/2008_10_15_mccain_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2008_10_15_mccain_obama.txt --dest
+      data/without_topics/2008_10_15_mccain_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2008_10_15_mccain_obama.txt
       hash: md5
       md5: 06526a78882f3f0d570e43d373a46775
       size: 86609
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -956,15 +954,15 @@ stages:
       md5: b2142c7d84f58b2594f2302500f8fac4
       size: 86116
   remove_topics@2012_10_03_romney_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2012_10_03_romney_obama.txt
-      --dest data/without_topics/2012_10_03_romney_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2012_10_03_romney_obama.txt --dest
+      data/without_topics/2012_10_03_romney_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2012_10_03_romney_obama.txt
       hash: md5
       md5: 1bc9dcd8c593b1c3a90ad013b3b7611c
       size: 97459
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -996,15 +994,15 @@ stages:
       md5: 0e123a60dfcd24b2f4ad17817c8fb298
       size: 97024
   remove_topics@2012_10_16_romney_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2012_10_16_romney_obama.txt
-      --dest data/without_topics/2012_10_16_romney_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2012_10_16_romney_obama.txt --dest
+      data/without_topics/2012_10_16_romney_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2012_10_16_romney_obama.txt
       hash: md5
       md5: 60d4ec3afecab4cda474726ef522ab2f
       size: 102329
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1036,15 +1034,15 @@ stages:
       md5: 76b4289471b5fc21ce5a42cef2384d73
       size: 101848
   remove_topics@2012_10_22_romney_obama.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2012_10_22_romney_obama.txt
-      --dest data/without_topics/2012_10_22_romney_obama.txt --params params.yaml
-      --topics topics
+    cmd: python src/remove_topics.py --data data/raw/2012_10_22_romney_obama.txt --dest
+      data/without_topics/2012_10_22_romney_obama.txt --params params.yaml --topics
+      topics
     deps:
     - path: data/raw/2012_10_22_romney_obama.txt
       hash: md5
       md5: e4e943a97cac50a52375c4a77a5aa605
       size: 97370
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1076,7 +1074,7 @@ stages:
       md5: 1b84f873665db8873fdbdc4d539fa37a
       size: 96960
   remove_topics@2016_09_26_trump_clinton.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2016_09_26_trump_clinton.txt
+    cmd: python src/remove_topics.py --data data/raw/2016_09_26_trump_clinton.txt
       --dest data/without_topics/2016_09_26_trump_clinton.txt --params params.yaml
       --topics topics
     deps:
@@ -1084,7 +1082,7 @@ stages:
       hash: md5
       md5: 74a4426dd2322a2a301eb49296903f5e
       size: 95487
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1116,7 +1114,7 @@ stages:
       md5: a9c4fcffacb4fa6f98288261ad4f5795
       size: 94964
   remove_topics@2016_10_09_trump_clinton.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2016_10_09_trump_clinton.txt
+    cmd: python src/remove_topics.py --data data/raw/2016_10_09_trump_clinton.txt
       --dest data/without_topics/2016_10_09_trump_clinton.txt --params params.yaml
       --topics topics
     deps:
@@ -1124,7 +1122,7 @@ stages:
       hash: md5
       md5: f8d438abe6540c2d7b93b890c8f18c34
       size: 91218
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1156,7 +1154,7 @@ stages:
       md5: 60f2ec50b6de21857b06e84af0791935
       size: 90770
   remove_topics@2016_10_19_trump_clinton.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2016_10_19_trump_clinton.txt
+    cmd: python src/remove_topics.py --data data/raw/2016_10_19_trump_clinton.txt
       --dest data/without_topics/2016_10_19_trump_clinton.txt --params params.yaml
       --topics topics
     deps:
@@ -1164,7 +1162,7 @@ stages:
       hash: md5
       md5: e58505a801c7bb7a0491b662269382db
       size: 95085
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1196,15 +1194,15 @@ stages:
       md5: d946fb7160a7dd8b50aadbc4a8a59c43
       size: 94572
   remove_topics@2020_09_29_trump_biden.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2020_09_29_trump_biden.txt
-      --dest data/without_topics/2020_09_29_trump_biden.txt --params params.yaml --topics
+    cmd: python src/remove_topics.py --data data/raw/2020_09_29_trump_biden.txt --dest
+      data/without_topics/2020_09_29_trump_biden.txt --params params.yaml --topics
       topics
     deps:
     - path: data/raw/2020_09_29_trump_biden.txt
       hash: md5
       md5: 4108af328b1302a6b41b04edca757c74
       size: 110774
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388
@@ -1236,15 +1234,655 @@ stages:
       md5: 8a812e4b1688b9ecab2749d6cafbc122
       size: 109902
   remove_topics@2020_10_22_trump_biden.txt:
-    cmd: python src/dvc_steps/remove_topics.py --data data/raw/2020_10_22_trump_biden.txt
-      --dest data/without_topics/2020_10_22_trump_biden.txt --params params.yaml --topics
+    cmd: python src/remove_topics.py --data data/raw/2020_10_22_trump_biden.txt --dest
+      data/without_topics/2020_10_22_trump_biden.txt --params params.yaml --topics
       topics
     deps:
     - path: data/raw/2020_10_22_trump_biden.txt
       hash: md5
       md5: dd80d409a741988939e12063a856413a
       size: 100151
-    - path: src/dvc_steps/remove_topics.py
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2020_10_22_trump_biden.txt
+      hash: md5
+      md5: f5f24291fd777ac6c6e8700229fdb554
+      size: 99798
+  remove_orphan_new_lines@2000_10_11_bush_gore.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2000_10_11_bush_gore.txt
+      --dest data/no_orphans/2000_10_11_bush_gore.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2000_10_11_bush_gore.txt
+      hash: md5
+      md5: d1f5ea0e1c7a2637eb30a9c05bbd7257
+      size: 89399
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2000_10_11_bush_gore.txt
+      hash: md5
+      md5: d3aa5128eb2b9f1e932f09bfd826ec06
+      size: 89166
+  remove_orphan_new_lines@2000_10_17_bush_gore.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2000_10_17_bush_gore.txt
+      --dest data/no_orphans/2000_10_17_bush_gore.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2000_10_17_bush_gore.txt
+      hash: md5
+      md5: 207121035c452246408f88d630497e24
+      size: 84549
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2000_10_17_bush_gore.txt
+      hash: md5
+      md5: a827fb3e71578630ba9d7dcc5ca3e0c0
+      size: 84381
+  remove_orphan_new_lines@2004_09_30_bush_kerry.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2004_09_30_bush_kerry.txt
+      --dest data/no_orphans/2004_09_30_bush_kerry.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2004_09_30_bush_kerry.txt
+      hash: md5
+      md5: 42bcae9490ac34c971b2e8c06d139bcc
+      size: 85144
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2004_09_30_bush_kerry.txt
+      hash: md5
+      md5: a46610ae2d81ff8f6ec7864edbf271e4
+      size: 84297
+  remove_orphan_new_lines@2004_10_08_bush_kerry.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2004_10_08_bush_kerry.txt
+      --dest data/no_orphans/2004_10_08_bush_kerry.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 9b6bdca01263ac18da44c8101c1f5b03
+      size: 93589
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: dbe67811235cbd9dc71412055a8f28dd
+      size: 93238
+  remove_orphan_new_lines@2004_10_13_bush_kerry.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2004_10_13_bush_kerry.txt
+      --dest data/no_orphans/2004_10_13_bush_kerry.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 80c54bb2672c75f6803781b12d7de945
+      size: 87258
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 2fa372cb48f8c62eb22d985cacaaa72e
+      size: 86955
+  remove_orphan_new_lines@2008_09_26_mccain_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2008_09_26_mccain_obama.txt
+      --dest data/no_orphans/2008_09_26_mccain_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: 72ecb02f219fd25d27bf3357e91817ea
+      size: 89941
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: c5178c32e4e49cde268f56036a95b232
+      size: 89460
+  remove_orphan_new_lines@2008_10_07_mccain_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2008_10_07_mccain_obama.txt
+      --dest data/no_orphans/2008_10_07_mccain_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: 84e72fe17d17785f7b4c0582e4799332
+      size: 89418
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: 216c2d9875c677d612d98d0058ac9ab5
+      size: 88936
+  remove_orphan_new_lines@2008_10_15_mccain_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2008_10_15_mccain_obama.txt
+      --dest data/no_orphans/2008_10_15_mccain_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 06526a78882f3f0d570e43d373a46775
+      size: 86609
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: b2142c7d84f58b2594f2302500f8fac4
+      size: 86116
+  remove_orphan_new_lines@2012_10_03_romney_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2012_10_03_romney_obama.txt
+      --dest data/no_orphans/2012_10_03_romney_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2012_10_03_romney_obama.txt
+      hash: md5
+      md5: 1bc9dcd8c593b1c3a90ad013b3b7611c
+      size: 97459
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2012_10_03_romney_obama.txt
+      hash: md5
+      md5: 0e123a60dfcd24b2f4ad17817c8fb298
+      size: 97024
+  remove_orphan_new_lines@2012_10_16_romney_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2012_10_16_romney_obama.txt
+      --dest data/no_orphans/2012_10_16_romney_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2012_10_16_romney_obama.txt
+      hash: md5
+      md5: 60d4ec3afecab4cda474726ef522ab2f
+      size: 102329
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2012_10_16_romney_obama.txt
+      hash: md5
+      md5: 76b4289471b5fc21ce5a42cef2384d73
+      size: 101848
+  remove_orphan_new_lines@2012_10_22_romney_obama.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2012_10_22_romney_obama.txt
+      --dest data/no_orphans/2012_10_22_romney_obama.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2012_10_22_romney_obama.txt
+      hash: md5
+      md5: e4e943a97cac50a52375c4a77a5aa605
+      size: 97370
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2012_10_22_romney_obama.txt
+      hash: md5
+      md5: 1b84f873665db8873fdbdc4d539fa37a
+      size: 96960
+  remove_orphan_new_lines@2016_09_26_trump_clinton.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2016_09_26_trump_clinton.txt
+      --dest data/no_orphans/2016_09_26_trump_clinton.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2016_09_26_trump_clinton.txt
+      hash: md5
+      md5: 74a4426dd2322a2a301eb49296903f5e
+      size: 95487
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2016_09_26_trump_clinton.txt
+      hash: md5
+      md5: a9c4fcffacb4fa6f98288261ad4f5795
+      size: 94964
+  remove_orphan_new_lines@2016_10_09_trump_clinton.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2016_10_09_trump_clinton.txt
+      --dest data/no_orphans/2016_10_09_trump_clinton.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2016_10_09_trump_clinton.txt
+      hash: md5
+      md5: f8d438abe6540c2d7b93b890c8f18c34
+      size: 91218
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2016_10_09_trump_clinton.txt
+      hash: md5
+      md5: 60f2ec50b6de21857b06e84af0791935
+      size: 90770
+  remove_orphan_new_lines@2016_10_19_trump_clinton.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2016_10_19_trump_clinton.txt
+      --dest data/no_orphans/2016_10_19_trump_clinton.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2016_10_19_trump_clinton.txt
+      hash: md5
+      md5: e58505a801c7bb7a0491b662269382db
+      size: 95085
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2016_10_19_trump_clinton.txt
+      hash: md5
+      md5: d946fb7160a7dd8b50aadbc4a8a59c43
+      size: 94572
+  remove_orphan_new_lines@2020_09_29_trump_biden.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2020_09_29_trump_biden.txt
+      --dest data/no_orphans/2020_09_29_trump_biden.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 4108af328b1302a6b41b04edca757c74
+      size: 110774
+    - path: src/remove_topics.py
+      hash: md5
+      md5: c3ffb790b0b5cf753659ef0b4a891caf
+      size: 1388
+    params:
+      params.yaml:
+        topics:
+        - Preventing Future Terrorist Attacks
+        - Likelihood of Future Terrorist Attack
+        - President's Judgment on Foreign Policy
+        - Priorities in the War on Terror
+        - Homeland Security
+        - Criteria for Withdrawal of U.S. Troops From Iraq
+        - Postwar Iraq
+        - Candidates' Candor and Consistency
+        - Hard Decisions/Support for the Military
+        - Timeline for Withdrawal From Iraq/ Conditions in Iraq
+        - Future U.S. Military Action
+        - Preemptive Action/International Cooperation
+        - North Korea and Iran
+        - Iran/Sudan
+        - Character of the Candidates
+        - Nuclear Proliferation
+        - President Vladimir Putin of Russia
+        - Closing Statements
+        - (Applause)
+    outs:
+    - path: data/without_topics/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 8a812e4b1688b9ecab2749d6cafbc122
+      size: 109902
+  remove_orphan_new_lines@2020_10_22_trump_biden.txt:
+    cmd: python src/remove_orphan_new_lines.py --data data/without_topics/2020_10_22_trump_biden.txt
+      --dest data/no_orphans/2020_10_22_trump_biden.txt --params params.yaml --topics
+      topics
+    deps:
+    - path: data/raw/2020_10_22_trump_biden.txt
+      hash: md5
+      md5: dd80d409a741988939e12063a856413a
+      size: 100151
+    - path: src/remove_topics.py
       hash: md5
       md5: c3ffb790b0b5cf753659ef0b4a891caf
       size: 1388

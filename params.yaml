@@ -20,7 +20,7 @@ topics:
   - "(Applause)"
 
 speeches:
-  - 2000_10_03_bush_gore.txt
+  #- 2000_10_03_bush_gore.txt
   - 2000_10_11_bush_gore.txt
   - 2000_10_17_bush_gore.txt
   - 2004_09_30_bush_kerry.txt
