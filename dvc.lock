@@ -1997,3 +1997,45 @@ stages:
       hash: md5
       md5: 0f54ec904c0eceaa440f3cbbc09d6a3c
       size: 80315
+  remove_topics@2020_09_29_trump_biden:
+    cmd: python src/remove_topics.py --data data/raw/2020_09_29_trump_biden.txt --dest
+      data/without_topics/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
+    deps:
+    - path: data/metadata/2020_09_29_trump_biden.json
+      hash: md5
+      md5: 7b55a8024df421f36279cab16d198349
+      size: 907
+    - path: data/raw/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 4108af328b1302a6b41b04edca757c74
+      size: 110774
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 5c28acc75fc894abe21fde2efea7fa84
+      size: 1243
+    outs:
+    - path: data/without_topics/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 8a812e4b1688b9ecab2749d6cafbc122
+      size: 109902
+  uniform_candidate_names@2020_09_29_trump_biden:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2020_09_29_trump_biden.txt
+      --dest data/uniformed/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
+    deps:
+    - path: data/metadata/2020_09_29_trump_biden.json
+      hash: md5
+      md5: 7b55a8024df421f36279cab16d198349
+      size: 907
+    - path: data/without_topics/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 8a812e4b1688b9ecab2749d6cafbc122
+      size: 109902
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: 44345b867489e22cf359baca5c6397b7
+      size: 1251
+    outs:
+    - path: data/uniformed/2020_09_29_trump_biden.txt
+      hash: md5
+      md5: 8a812e4b1688b9ecab2749d6cafbc122
+      size: 109902
