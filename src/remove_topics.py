@@ -21,7 +21,7 @@ def remove_topics(opt):
                 continue
             if line =='\n':
                 continue
-            file.write(line)
+            file.write(line.strip() + '\n')
     print(f"Uniformed dataset saved to {opt.dest}")
 
 def parse_arguments():

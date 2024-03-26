@@ -11,18 +11,22 @@ def remove_orphan_new_lines(opt):
     folder_dest = opt.dest.split('/')[:-1]
     os.makedirs('/'.join(folder_dest), exist_ok=True)
     candidates_names = list(map(lambda x: x["speech_candidate_id"].strip(),metadata["candidates"]))
+    candidates_names.extend(list(map(lambda x:x.strip(),metadata["broadcaster"]["hosts"])))
     print(candidates_names)
+
     #check if a line do not start with any of the candidates names
     new_lines = []
-    for line in lines:
-        if line.split(',')[0] in candidates_names:
+    for i,line in enumerate(lines):
+        #check if line starts with any of the candidates names        
+        if any(map(lambda x: line.startswith(x), candidates_names)):
             new_lines.append(line)
         else:
             #otherwise the line should be appended to the last line after a space
             new_lines[-1] = new_lines[-1].strip() + ' ' + line.strip()
+    #save output file
     with open(opt.dest, 'w') as file:
         for line in new_lines:
-            file.write(line)
+            file.write(line.strip() + '\n')
     
 
 def parse_arguments():

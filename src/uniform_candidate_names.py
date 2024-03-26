@@ -12,13 +12,15 @@ def uniform_candidate_names(opt):
     folder_dest = opt.dest.split('/')[:-1]
     os.makedirs('/'.join(folder_dest), exist_ok=True)
     for candidate in metadata["candidates"]:
-        old_name = candidate["candidate_raw_name"]
+        old_names = candidate["candidate_raw_names"]
         new_name = candidate["speech_candidate_id"]
         for i in range(len(lines)):
-            lines[i] = lines[i].replace(old_name, new_name)
+            for name in old_names:
+                if name in lines[i]:
+                    lines[i] = lines[i].replace(name, new_name)
     with open(opt.dest, 'w') as file:
         for line in lines:
-            file.write(line)
+            file.write(line.strip() + '\n')
 
 def parse_arguments():
     parser = argparse.ArgumentParser()

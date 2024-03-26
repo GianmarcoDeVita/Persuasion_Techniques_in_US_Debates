@@ -1919,75 +1919,75 @@ stages:
     deps:
     - path: data/metadata/2020_10_22_trump_biden.json
       hash: md5
-      md5: e83e52ff950b25a7bd0b960788bb3f81
-      size: 905
+      md5: 5bcafe939860b79ca93d970fef51b86f
+      size: 914
     - path: data/raw/2020_10_22_trump_biden.txt
       hash: md5
       md5: dd80d409a741988939e12063a856413a
       size: 100151
     - path: src/remove_topics.py
       hash: md5
-      md5: 5c28acc75fc894abe21fde2efea7fa84
-      size: 1243
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
     outs:
     - path: data/without_topics/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 3e107b351ad083e97bb4d5691d5649b4
+      size: 99799
   uniform_candidate_names@2020_10_22_trump_biden:
     cmd: python src/uniform_candidate_names.py --data data/without_topics/2020_10_22_trump_biden.txt
       --dest data/uniformed/2020_10_22_trump_biden.txt --metadata data/metadata/2020_10_22_trump_biden.json
     deps:
     - path: data/metadata/2020_10_22_trump_biden.json
       hash: md5
-      md5: e83e52ff950b25a7bd0b960788bb3f81
-      size: 905
+      md5: 5bcafe939860b79ca93d970fef51b86f
+      size: 914
     - path: data/without_topics/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 3e107b351ad083e97bb4d5691d5649b4
+      size: 99799
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 44345b867489e22cf359baca5c6397b7
-      size: 1251
+      md5: 4780b83e79c9ac3d1ce34f84f96a99de
+      size: 1344
     outs:
     - path: data/uniformed/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 3e107b351ad083e97bb4d5691d5649b4
+      size: 99799
   remove_orphan_new_lines@2020_10_22_trump_biden:
     cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2020_10_22_trump_biden.txt
       --dest data/no_orphan_lines/2020_10_22_trump_biden.txt --metadata data/metadata/2020_10_22_trump_biden.json
     deps:
     - path: data/metadata/2020_10_22_trump_biden.json
       hash: md5
-      md5: e83e52ff950b25a7bd0b960788bb3f81
-      size: 905
+      md5: 5bcafe939860b79ca93d970fef51b86f
+      size: 914
     - path: data/uniformed/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 3e107b351ad083e97bb4d5691d5649b4
+      size: 99799
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 513d5910e7627d637d064598c82ee69d
-      size: 1505
+      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
+      size: 1737
     outs:
     - path: data/no_orphan_lines/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 4599c6c25b672f879ce0d82f13dd87b7
+      size: 99799
   split_candidate@2020_10_22_trump_biden:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2020_10_22_trump_biden.txt
       --dest data/speeches/2020_10_22_trump_biden.json --metadata data/metadata/2020_10_22_trump_biden.json
     deps:
     - path: data/metadata/2020_10_22_trump_biden.json
       hash: md5
-      md5: e83e52ff950b25a7bd0b960788bb3f81
-      size: 905
+      md5: 5bcafe939860b79ca93d970fef51b86f
+      size: 914
     - path: data/no_orphan_lines/2020_10_22_trump_biden.txt
       hash: md5
-      md5: f5f24291fd777ac6c6e8700229fdb554
-      size: 99798
+      md5: 4599c6c25b672f879ce0d82f13dd87b7
+      size: 99799
     - path: src/split_candidate.py
       hash: md5
       md5: c8e64fef94d433780ed0755601846084
@@ -1995,83 +1995,83 @@ stages:
     outs:
     - path: data/speeches/2020_10_22_trump_biden.json
       hash: md5
-      md5: 0f54ec904c0eceaa440f3cbbc09d6a3c
-      size: 80315
+      md5: dcc395b20a1fee9fa0829f47b524c754
+      size: 80446
   remove_topics@2020_09_29_trump_biden:
     cmd: python src/remove_topics.py --data data/raw/2020_09_29_trump_biden.txt --dest
       data/without_topics/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
     deps:
     - path: data/metadata/2020_09_29_trump_biden.json
       hash: md5
-      md5: 7b55a8024df421f36279cab16d198349
-      size: 907
+      md5: 0ca5d7dbb2042d4a192224df0fb9ad15
+      size: 916
     - path: data/raw/2020_09_29_trump_biden.txt
       hash: md5
       md5: 4108af328b1302a6b41b04edca757c74
       size: 110774
     - path: src/remove_topics.py
       hash: md5
-      md5: 5c28acc75fc894abe21fde2efea7fa84
-      size: 1243
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
     outs:
     - path: data/without_topics/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: c8a625be1dd469c256c873c73877f85e
+      size: 109903
   uniform_candidate_names@2020_09_29_trump_biden:
     cmd: python src/uniform_candidate_names.py --data data/without_topics/2020_09_29_trump_biden.txt
       --dest data/uniformed/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
     deps:
     - path: data/metadata/2020_09_29_trump_biden.json
       hash: md5
-      md5: 7b55a8024df421f36279cab16d198349
-      size: 907
+      md5: 0ca5d7dbb2042d4a192224df0fb9ad15
+      size: 916
     - path: data/without_topics/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: c8a625be1dd469c256c873c73877f85e
+      size: 109903
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 44345b867489e22cf359baca5c6397b7
-      size: 1251
+      md5: 4780b83e79c9ac3d1ce34f84f96a99de
+      size: 1344
     outs:
     - path: data/uniformed/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: c8a625be1dd469c256c873c73877f85e
+      size: 109903
   remove_orphan_new_lines@2020_09_29_trump_biden:
     cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2020_09_29_trump_biden.txt
       --dest data/no_orphan_lines/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
     deps:
     - path: data/metadata/2020_09_29_trump_biden.json
       hash: md5
-      md5: 7b55a8024df421f36279cab16d198349
-      size: 907
+      md5: 0ca5d7dbb2042d4a192224df0fb9ad15
+      size: 916
     - path: data/uniformed/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: c8a625be1dd469c256c873c73877f85e
+      size: 109903
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 513d5910e7627d637d064598c82ee69d
-      size: 1505
+      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
+      size: 1737
     outs:
     - path: data/no_orphan_lines/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: ca5d4727ab291dd03221dd2f9f4aed65
+      size: 109903
   split_candidate@2020_09_29_trump_biden:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2020_09_29_trump_biden.txt
       --dest data/speeches/2020_09_29_trump_biden.json --metadata data/metadata/2020_09_29_trump_biden.json
     deps:
     - path: data/metadata/2020_09_29_trump_biden.json
       hash: md5
-      md5: 7b55a8024df421f36279cab16d198349
-      size: 907
+      md5: 0ca5d7dbb2042d4a192224df0fb9ad15
+      size: 916
     - path: data/no_orphan_lines/2020_09_29_trump_biden.txt
       hash: md5
-      md5: 8a812e4b1688b9ecab2749d6cafbc122
-      size: 109902
+      md5: ca5d4727ab291dd03221dd2f9f4aed65
+      size: 109903
     - path: src/split_candidate.py
       hash: md5
       md5: c8e64fef94d433780ed0755601846084
@@ -2079,5 +2079,5 @@ stages:
     outs:
     - path: data/speeches/2020_09_29_trump_biden.json
       hash: md5
-      md5: f17fff888cb0a28b42c9cb7ba9b7e8d3
-      size: 69810
+      md5: 17531bea51834492054c9d77158a70cd
+      size: 79782
