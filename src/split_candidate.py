@@ -17,7 +17,7 @@ def split_candidate(opt):
                 #remove candidate name from line
                 line = line.replace(candidate_name.strip(), '')
                 candidate_lines.append(line)
-        candidate_text = '\n'.join(candidate_lines)
+        candidate_text = ''.join(candidate_lines)
         candidate["text"] = candidate_text
     
     #create output folder if it does not exist

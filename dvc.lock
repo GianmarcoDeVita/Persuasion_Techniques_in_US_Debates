@@ -1990,13 +1990,13 @@ stages:
       size: 99799
     - path: src/split_candidate.py
       hash: md5
-      md5: c8e64fef94d433780ed0755601846084
-      size: 1534
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
     outs:
     - path: data/speeches/2020_10_22_trump_biden.json
       hash: md5
-      md5: dcc395b20a1fee9fa0829f47b524c754
-      size: 80446
+      md5: 84444b5e9cc70eda1a4b0179e2f97dab
+      size: 80038
   remove_topics@2020_09_29_trump_biden:
     cmd: python src/remove_topics.py --data data/raw/2020_09_29_trump_biden.txt --dest
       data/without_topics/2020_09_29_trump_biden.txt --metadata data/metadata/2020_09_29_trump_biden.json
@@ -2074,10 +2074,10 @@ stages:
       size: 109903
     - path: src/split_candidate.py
       hash: md5
-      md5: c8e64fef94d433780ed0755601846084
-      size: 1534
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
     outs:
     - path: data/speeches/2020_09_29_trump_biden.json
       hash: md5
-      md5: 17531bea51834492054c9d77158a70cd
-      size: 79782
+      md5: 781512b05ea16e3d78ed4eee64f919c7
+      size: 78566
