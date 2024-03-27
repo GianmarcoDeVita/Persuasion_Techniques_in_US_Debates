@@ -43,3 +43,13 @@ stages:
         - data/metadata/${item}.json
       outs:
         - data/speeches/${item}.json
+
+  annotate_persuasion:
+    foreach: ${speeches}
+    do:
+      cmd: python src/annotate_persuasion.py --data data/speeches/${item}.json --dest data/annotated/${item}.json
+      deps:
+        - src/annotate_persuasion.py
+        - data/speeches/${item}.json
+      outs:
+        - data/annotated/${item}.json
