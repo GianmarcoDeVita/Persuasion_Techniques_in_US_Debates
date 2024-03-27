@@ -3,14 +3,14 @@ speeches:
    - 2000_10_11_bush_gore
    - 2000_10_17_bush_gore
    - 2004_09_30_bush_kerry
-   #- 2004_10_08_bush_kerry
-   #- 2004_10_13_bush_kerry
-   #- 2008_09_26_mccain_obama
-   #- 2008_10_07_mccain_obama
-   #- 2008_10_15_mccain_obama
-   #- 2012_10_03_romney_obama
-   #- 2012_10_16_romney_obama
-   #- 2012_10_22_romney_obama
+   - 2004_10_08_bush_kerry
+   - 2004_10_13_bush_kerry
+   - 2008_09_26_mccain_obama
+   - 2008_10_07_mccain_obama
+   - 2008_10_15_mccain_obama
+   - 2012_10_03_romney_obama
+   - 2012_10_16_romney_obama
+   - 2012_10_22_romney_obama
    - 2016_09_26_trump_clinton
    - 2016_10_09_trump_clinton
    - 2016_10_19_trump_clinton
