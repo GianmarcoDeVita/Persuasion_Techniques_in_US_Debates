@@ -2108,8 +2108,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 0e17c3afb72607c7e351ab3ec3c46580
+      size: 2586
     - path: data/raw/2012_10_16_romney_obama.txt
       hash: md5
       md5: 60d4ec3afecab4cda474726ef522ab2f
@@ -2886,3 +2886,747 @@ stages:
     - path: data/metadata/2004_09_30_bush_kerry.json
       hash: md5
       md5: 4ac263f591d628bae91aae03430b57d2
+      size: 1593
+    - path: data/uniformed/2004_09_30_bush_kerry.txt
+      hash: md5
+      md5: 07177d9b032384afdfb9a7c615a8eccb
+      size: 83585
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2004_09_30_bush_kerry.txt
+      hash: md5
+      md5: 95a2af8441a81777e181888dd3e4b506
+      size: 83585
+  split_candidate@2004_09_30_bush_kerry:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2004_09_30_bush_kerry.txt
+      --dest data/speeches/2004_09_30_bush_kerry.json --metadata data/metadata/2004_09_30_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_09_30_bush_kerry.json
+      hash: md5
+      md5: 4ac263f591d628bae91aae03430b57d2
+      size: 1593
+    - path: data/no_orphan_lines/2004_09_30_bush_kerry.txt
+      hash: md5
+      md5: 95a2af8441a81777e181888dd3e4b506
+      size: 83585
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2004_09_30_bush_kerry.json
+      hash: md5
+      md5: 2f0041b7cdd8adfffc24c026d5bc6461
+      size: 76101
+  annotate_persuasion@2000_10_03_bush_gore:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_03_bush_gore.json
+      --dest data/annotated/2000_10_03_bush_gore.json
+    deps:
+    - path: data/speeches/2000_10_03_bush_gore.json
+      hash: md5
+      md5: 30208973038656806f331ccd5f52bb4c
+      size: 79622
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2000_10_03_bush_gore.json
+      hash: md5
+      md5: 394421d68f0e1db59c1715ddfd29792e
+      size: 79906
+  annotate_persuasion@2000_10_11_bush_gore:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_11_bush_gore.json
+      --dest data/annotated/2000_10_11_bush_gore.json
+    deps:
+    - path: data/speeches/2000_10_11_bush_gore.json
+      hash: md5
+      md5: 5ea0c97d52cbaeb4984cb41f92044448
+      size: 77258
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2000_10_11_bush_gore.json
+      hash: md5
+      md5: f37757369e36a06f9c403ff8581ae363
+      size: 77542
+  annotate_persuasion@2000_10_17_bush_gore:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_17_bush_gore.json
+      --dest data/annotated/2000_10_17_bush_gore.json
+    deps:
+    - path: data/speeches/2000_10_17_bush_gore.json
+      hash: md5
+      md5: 1897b5d85fcc7de6cb2499278cfbfc02
+      size: 73552
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2000_10_17_bush_gore.json
+      hash: md5
+      md5: f51334a417c0c2c1db87b6f87202b83a
+      size: 73836
+  annotate_persuasion@2004_09_30_bush_kerry:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2004_09_30_bush_kerry.json
+      --dest data/annotated/2004_09_30_bush_kerry.json
+    deps:
+    - path: data/speeches/2004_09_30_bush_kerry.json
+      hash: md5
+      md5: 2f0041b7cdd8adfffc24c026d5bc6461
+      size: 76101
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2004_09_30_bush_kerry.json
+      hash: md5
+      md5: 1c479ea60b24b8d4ccdfa9f5b61482ed
+      size: 76385
+  annotate_persuasion@2016_09_26_trump_clinton:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2016_09_26_trump_clinton.json
+      --dest data/annotated/2016_09_26_trump_clinton.json
+    deps:
+    - path: data/speeches/2016_09_26_trump_clinton.json
+      hash: md5
+      md5: 6445dfefed4517c92d8eae4ff4da0eed
+      size: 82952
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2016_09_26_trump_clinton.json
+      hash: md5
+      md5: 499d04b07377514f4aa0884195aafbfe
+      size: 83236
+  annotate_persuasion@2016_10_09_trump_clinton:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2016_10_09_trump_clinton.json
+      --dest data/annotated/2016_10_09_trump_clinton.json
+    deps:
+    - path: data/speeches/2016_10_09_trump_clinton.json
+      hash: md5
+      md5: 5f5138bc1b08ba07b25ed0b334319971
+      size: 75181
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2016_10_09_trump_clinton.json
+      hash: md5
+      md5: e37e0cc247fb206055cb10e04e027ef6
+      size: 75465
+  annotate_persuasion@2016_10_19_trump_clinton:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2016_10_19_trump_clinton.json
+      --dest data/annotated/2016_10_19_trump_clinton.json
+    deps:
+    - path: data/speeches/2016_10_19_trump_clinton.json
+      hash: md5
+      md5: 8bae636405cd843afae56b39815975c6
+      size: 75345
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2016_10_19_trump_clinton.json
+      hash: md5
+      md5: b433f9f512e568b3f0cd1941ec767d2a
+      size: 75629
+  annotate_persuasion@2020_09_29_trump_biden:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2020_09_29_trump_biden.json
+      --dest data/annotated/2020_09_29_trump_biden.json
+    deps:
+    - path: data/speeches/2020_09_29_trump_biden.json
+      hash: md5
+      md5: 6c64ce75373debfacb39781d6502359a
+      size: 78593
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2020_09_29_trump_biden.json
+      hash: md5
+      md5: 20bbb5910d2eebb211cb1e3c91247976
+      size: 78877
+  annotate_persuasion@2020_10_22_trump_biden:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2020_10_22_trump_biden.json
+      --dest data/annotated/2020_10_22_trump_biden.json
+    deps:
+    - path: data/speeches/2020_10_22_trump_biden.json
+      hash: md5
+      md5: 84444b5e9cc70eda1a4b0179e2f97dab
+      size: 80038
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2020_10_22_trump_biden.json
+      hash: md5
+      md5: 7cbf6f900ca0da509fb2a3b28c5a50a6
+      size: 80322
+  annotate_persuasion@2012_10_03_romney_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_03_romney_obama.json
+      --dest data/annotated/2012_10_03_romney_obama.json
+    deps:
+    - path: data/speeches/2012_10_03_romney_obama.json
+      hash: md5
+      md5: ceb684c5aa8accc0ed8f33f41b8a47fb
+      size: 86858
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2012_10_03_romney_obama.json
+      hash: md5
+      md5: c6d5549835e26594212aa5b619cb6d35
+      size: 87142
+  annotate_persuasion@2012_10_16_romney_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_16_romney_obama.json
+      --dest data/annotated/2012_10_16_romney_obama.json
+    deps:
+    - path: data/speeches/2012_10_16_romney_obama.json
+      hash: md5
+      md5: 0945b0044a1294fea4b239ecf2a30513
+      size: 87134
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2012_10_16_romney_obama.json
+      hash: md5
+      md5: 7fb25793764ab60fa883f316db4fdadc
+      size: 87418
+  annotate_persuasion@2012_10_22_romney_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_22_romney_obama.json
+      --dest data/annotated/2012_10_22_romney_obama.json
+    deps:
+    - path: data/speeches/2012_10_22_romney_obama.json
+      hash: md5
+      md5: 697a015f87a3b584216823e186318c56
+      size: 87939
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2012_10_22_romney_obama.json
+      hash: md5
+      md5: cc25571babdf83dc2b0dddfd1b0acd65
+      size: 88223
+  remove_topics@2004_10_08_bush_kerry:
+    cmd: python src/remove_topics.py --data data/raw/2004_10_08_bush_kerry.txt --dest
+      data/without_topics/2004_10_08_bush_kerry.txt --metadata data/metadata/2004_10_08_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      size: 1823
+    - path: data/raw/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 9b6bdca01263ac18da44c8101c1f5b03
+      size: 93589
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
+    outs:
+    - path: data/without_topics/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 5ca4710507c099543e8c7c49e3db9ccf
+      size: 92837
+  remove_topics@2004_10_13_bush_kerry:
+    cmd: python src/remove_topics.py --data data/raw/2004_10_13_bush_kerry.txt --dest
+      data/without_topics/2004_10_13_bush_kerry.txt --metadata data/metadata/2004_10_13_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: 01ccc394efdc27c34fe8109e23e23201
+      size: 1460
+    - path: data/raw/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 80c54bb2672c75f6803781b12d7de945
+      size: 87258
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
+    outs:
+    - path: data/without_topics/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: c8aa4814ca557770ca6709477dd1531c
+      size: 86555
+  remove_topics@2008_09_26_mccain_obama:
+    cmd: python src/remove_topics.py --data data/raw/2008_09_26_mccain_obama.txt --dest
+      data/without_topics/2008_09_26_mccain_obama.txt --metadata data/metadata/2008_09_26_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: 4ada4add583289310d6eee272f4ef72c
+      size: 938
+    - path: data/raw/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: 72ecb02f219fd25d27bf3357e91817ea
+      size: 89941
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
+    outs:
+    - path: data/without_topics/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: c5178c32e4e49cde268f56036a95b232
+      size: 89460
+  remove_topics@2008_10_07_mccain_obama:
+    cmd: python src/remove_topics.py --data data/raw/2008_10_07_mccain_obama.txt --dest
+      data/without_topics/2008_10_07_mccain_obama.txt --metadata data/metadata/2008_10_07_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: 313386c6a07b39a23e993ef1a278fc5e
+      size: 974
+    - path: data/raw/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: 84e72fe17d17785f7b4c0582e4799332
+      size: 89418
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
+    outs:
+    - path: data/without_topics/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: d58c3c8a440abcb27ceb95d336370bc9
+      size: 88859
+  remove_topics@2008_10_15_mccain_obama:
+    cmd: python src/remove_topics.py --data data/raw/2008_10_15_mccain_obama.txt --dest
+      data/without_topics/2008_10_15_mccain_obama.txt --metadata data/metadata/2008_10_15_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: e83568b45d23aa2c0448b4bfb62b2045
+      size: 951
+    - path: data/raw/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 06526a78882f3f0d570e43d373a46775
+      size: 86609
+    - path: src/remove_topics.py
+      hash: md5
+      md5: 96617e82a6cab3471ed1fac49077d0a4
+      size: 1258
+    outs:
+    - path: data/without_topics/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: b2142c7d84f58b2594f2302500f8fac4
+      size: 86116
+  uniform_candidate_names@2004_10_08_bush_kerry:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2004_10_08_bush_kerry.txt
+      --dest data/uniformed/2004_10_08_bush_kerry.txt --metadata data/metadata/2004_10_08_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      size: 1823
+    - path: data/without_topics/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 5ca4710507c099543e8c7c49e3db9ccf
+      size: 92837
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
+    outs:
+    - path: data/uniformed/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: e3bc0c61ca70a5d4d44a9cbe6d6ac6b4
+      size: 92155
+  uniform_candidate_names@2004_10_13_bush_kerry:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2004_10_13_bush_kerry.txt
+      --dest data/uniformed/2004_10_13_bush_kerry.txt --metadata data/metadata/2004_10_13_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: 01ccc394efdc27c34fe8109e23e23201
+      size: 1460
+    - path: data/without_topics/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: c8aa4814ca557770ca6709477dd1531c
+      size: 86555
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
+    outs:
+    - path: data/uniformed/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 5701f1f271c547089f88d8ff359c1c04
+      size: 86007
+  uniform_candidate_names@2008_09_26_mccain_obama:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2008_09_26_mccain_obama.txt
+      --dest data/uniformed/2008_09_26_mccain_obama.txt --metadata data/metadata/2008_09_26_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: 8431c02bbbda39add5844ec6cc29823e
+      size: 967
+    - path: data/without_topics/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: c5178c32e4e49cde268f56036a95b232
+      size: 89460
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
+    outs:
+    - path: data/uniformed/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: c5178c32e4e49cde268f56036a95b232
+      size: 89460
+  uniform_candidate_names@2008_10_07_mccain_obama:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2008_10_07_mccain_obama.txt
+      --dest data/uniformed/2008_10_07_mccain_obama.txt --metadata data/metadata/2008_10_07_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: 313386c6a07b39a23e993ef1a278fc5e
+      size: 974
+    - path: data/without_topics/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: d58c3c8a440abcb27ceb95d336370bc9
+      size: 88859
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
+    outs:
+    - path: data/uniformed/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: d58c3c8a440abcb27ceb95d336370bc9
+      size: 88859
+  uniform_candidate_names@2008_10_15_mccain_obama:
+    cmd: python src/uniform_candidate_names.py --data data/without_topics/2008_10_15_mccain_obama.txt
+      --dest data/uniformed/2008_10_15_mccain_obama.txt --metadata data/metadata/2008_10_15_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: e83568b45d23aa2c0448b4bfb62b2045
+      size: 951
+    - path: data/without_topics/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: b2142c7d84f58b2594f2302500f8fac4
+      size: 86116
+    - path: src/uniform_candidate_names.py
+      hash: md5
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
+    outs:
+    - path: data/uniformed/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 2976784c5097639a6601202a315620a1
+      size: 86116
+  remove_orphan_new_lines@2004_10_08_bush_kerry:
+    cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2004_10_08_bush_kerry.txt
+      --dest data/no_orphan_lines/2004_10_08_bush_kerry.txt --metadata data/metadata/2004_10_08_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      size: 1823
+    - path: data/uniformed/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: e3bc0c61ca70a5d4d44a9cbe6d6ac6b4
+      size: 92155
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 0192b5bb5bfc85507fd8f7ff2f6cc5ac
+      size: 92155
+  remove_orphan_new_lines@2004_10_13_bush_kerry:
+    cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2004_10_13_bush_kerry.txt
+      --dest data/no_orphan_lines/2004_10_13_bush_kerry.txt --metadata data/metadata/2004_10_13_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: 01ccc394efdc27c34fe8109e23e23201
+      size: 1460
+    - path: data/uniformed/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 5701f1f271c547089f88d8ff359c1c04
+      size: 86007
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 93fd4a50ea5fccfcd5250e1eef721a8f
+      size: 86007
+  remove_orphan_new_lines@2008_09_26_mccain_obama:
+    cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2008_09_26_mccain_obama.txt
+      --dest data/no_orphan_lines/2008_09_26_mccain_obama.txt --metadata data/metadata/2008_09_26_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: 8431c02bbbda39add5844ec6cc29823e
+      size: 967
+    - path: data/uniformed/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: c5178c32e4e49cde268f56036a95b232
+      size: 89460
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: 7dbf1ce9e78c96c43b2ceeb0e7a213c0
+      size: 89460
+  remove_orphan_new_lines@2008_10_07_mccain_obama:
+    cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2008_10_07_mccain_obama.txt
+      --dest data/no_orphan_lines/2008_10_07_mccain_obama.txt --metadata data/metadata/2008_10_07_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: 313386c6a07b39a23e993ef1a278fc5e
+      size: 974
+    - path: data/uniformed/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: d58c3c8a440abcb27ceb95d336370bc9
+      size: 88859
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: e1f1a2af1fa74f216cff4f90db70a11e
+      size: 88859
+  remove_orphan_new_lines@2008_10_15_mccain_obama:
+    cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2008_10_15_mccain_obama.txt
+      --dest data/no_orphan_lines/2008_10_15_mccain_obama.txt --metadata data/metadata/2008_10_15_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: e83568b45d23aa2c0448b4bfb62b2045
+      size: 951
+    - path: data/uniformed/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 2976784c5097639a6601202a315620a1
+      size: 86116
+    - path: src/remove_orphan_new_lines.py
+      hash: md5
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
+    outs:
+    - path: data/no_orphan_lines/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 24e43273d7119ad261e70d59f5566285
+      size: 86116
+  split_candidate@2004_10_08_bush_kerry:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2004_10_08_bush_kerry.txt
+      --dest data/speeches/2004_10_08_bush_kerry.json --metadata data/metadata/2004_10_08_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      size: 1823
+    - path: data/no_orphan_lines/2004_10_08_bush_kerry.txt
+      hash: md5
+      md5: 0192b5bb5bfc85507fd8f7ff2f6cc5ac
+      size: 92155
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: abb802c32109030f89e3efd089d8b9ca
+      size: 78608
+  split_candidate@2004_10_13_bush_kerry:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2004_10_13_bush_kerry.txt
+      --dest data/speeches/2004_10_13_bush_kerry.json --metadata data/metadata/2004_10_13_bush_kerry.json
+    deps:
+    - path: data/metadata/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: 01ccc394efdc27c34fe8109e23e23201
+      size: 1460
+    - path: data/no_orphan_lines/2004_10_13_bush_kerry.txt
+      hash: md5
+      md5: 93fd4a50ea5fccfcd5250e1eef721a8f
+      size: 86007
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: ab4ce9e87b901db47cc5e93a8b37583c
+      size: 74218
+  split_candidate@2008_09_26_mccain_obama:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2008_09_26_mccain_obama.txt
+      --dest data/speeches/2008_09_26_mccain_obama.json --metadata data/metadata/2008_09_26_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: 8431c02bbbda39add5844ec6cc29823e
+      size: 967
+    - path: data/no_orphan_lines/2008_09_26_mccain_obama.txt
+      hash: md5
+      md5: 7dbf1ce9e78c96c43b2ceeb0e7a213c0
+      size: 89460
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: d665a67bef3031931404a3aafa691dc9
+      size: 83231
+  split_candidate@2008_10_07_mccain_obama:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2008_10_07_mccain_obama.txt
+      --dest data/speeches/2008_10_07_mccain_obama.json --metadata data/metadata/2008_10_07_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: 313386c6a07b39a23e993ef1a278fc5e
+      size: 974
+    - path: data/no_orphan_lines/2008_10_07_mccain_obama.txt
+      hash: md5
+      md5: e1f1a2af1fa74f216cff4f90db70a11e
+      size: 88859
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: db7fa501ecdf6e7abf50b0cb877b4ff8
+      size: 76439
+  split_candidate@2008_10_15_mccain_obama:
+    cmd: python src/split_candidate.py --data data/no_orphan_lines/2008_10_15_mccain_obama.txt
+      --dest data/speeches/2008_10_15_mccain_obama.json --metadata data/metadata/2008_10_15_mccain_obama.json
+    deps:
+    - path: data/metadata/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: e83568b45d23aa2c0448b4bfb62b2045
+      size: 951
+    - path: data/no_orphan_lines/2008_10_15_mccain_obama.txt
+      hash: md5
+      md5: 24e43273d7119ad261e70d59f5566285
+      size: 86116
+    - path: src/split_candidate.py
+      hash: md5
+      md5: 62c185a241bbbdd87eb96592ee08bc34
+      size: 1532
+    outs:
+    - path: data/speeches/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: 7bea383eddb113b441dfaf1b640e5253
+      size: 78947
+  annotate_persuasion@2004_10_08_bush_kerry:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2004_10_08_bush_kerry.json
+      --dest data/annotated/2004_10_08_bush_kerry.json
+    deps:
+    - path: data/speeches/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: abb802c32109030f89e3efd089d8b9ca
+      size: 78608
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2004_10_08_bush_kerry.json
+      hash: md5
+      md5: 61798af5b45b95c910f0de8d2ad70c74
+      size: 78892
+  annotate_persuasion@2004_10_13_bush_kerry:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2004_10_13_bush_kerry.json
+      --dest data/annotated/2004_10_13_bush_kerry.json
+    deps:
+    - path: data/speeches/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: ab4ce9e87b901db47cc5e93a8b37583c
+      size: 74218
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2004_10_13_bush_kerry.json
+      hash: md5
+      md5: 7831636e09e7b32d22c5c85a524f603c
+      size: 74502
+  annotate_persuasion@2008_09_26_mccain_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2008_09_26_mccain_obama.json
+      --dest data/annotated/2008_09_26_mccain_obama.json
+    deps:
+    - path: data/speeches/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: d665a67bef3031931404a3aafa691dc9
+      size: 83231
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2008_09_26_mccain_obama.json
+      hash: md5
+      md5: 467244e4c45aa5f2c22912aa93aac7c8
+      size: 83515
+  annotate_persuasion@2008_10_07_mccain_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2008_10_07_mccain_obama.json
+      --dest data/annotated/2008_10_07_mccain_obama.json
+    deps:
+    - path: data/speeches/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: db7fa501ecdf6e7abf50b0cb877b4ff8
+      size: 76439
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2008_10_07_mccain_obama.json
+      hash: md5
+      md5: 41e1404210325fd895c3b81193d836d0
+      size: 76723
+  annotate_persuasion@2008_10_15_mccain_obama:
+    cmd: python src/annotate_persuasion.py --data data/speeches/2008_10_15_mccain_obama.json
+      --dest data/annotated/2008_10_15_mccain_obama.json
+    deps:
+    - path: data/speeches/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: 7bea383eddb113b441dfaf1b640e5253
+      size: 78947
+    - path: src/annotate_persuasion.py
+      hash: md5
+      md5: 24d6b665018c98a233559c493d80f78b
+      size: 1303
+    outs:
+    - path: data/annotated/2008_10_15_mccain_obama.json
+      hash: md5
+      md5: 23f529647378b556190bfd292bc50c21
+      size: 79231
