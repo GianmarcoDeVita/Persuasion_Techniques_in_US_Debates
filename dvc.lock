@@ -2662,8 +2662,8 @@ stages:
       size: 88887
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2000_10_03_bush_gore.txt
       hash: md5
@@ -2683,8 +2683,8 @@ stages:
       size: 89155
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2000_10_11_bush_gore.txt
       hash: md5
@@ -2704,8 +2704,8 @@ stages:
       size: 84381
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2000_10_17_bush_gore.txt
       hash: md5
@@ -2872,8 +2872,8 @@ stages:
       size: 84297
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2004_09_30_bush_kerry.txt
       hash: md5
