@@ -12,7 +12,6 @@ def remove_orphan_new_lines(opt):
     os.makedirs('/'.join(folder_dest), exist_ok=True)
     candidates_names = list(map(lambda x: x["speech_candidate_id"].strip(),metadata["candidates"]))
     candidates_names.extend(list(map(lambda x:x.strip(),metadata["broadcaster"]["hosts"])))
-    print(candidates_names)
 
     #check if a line do not start with any of the candidates names
     new_lines = []

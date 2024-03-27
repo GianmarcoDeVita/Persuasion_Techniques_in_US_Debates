@@ -16,8 +16,9 @@ def uniform_candidate_names(opt):
         new_name = candidate["speech_candidate_id"]
         for i in range(len(lines)):
             for name in old_names:
-                if lines[i].startswith(name):
-                    lines[i] = lines[i].replace(name, new_name, 1)
+                if lines[i].strip().startswith(name.strip()):
+                    lines[i] = lines[i].replace(name.strip(), new_name.strip(), 1)
+
     with open(opt.dest, 'w') as file:
         for line in lines:
             file.write(line.strip() + '\n')

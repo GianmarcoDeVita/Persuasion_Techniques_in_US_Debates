@@ -1948,8 +1948,8 @@ stages:
       size: 99799
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2020_10_22_trump_biden.txt
       hash: md5
@@ -1969,8 +1969,8 @@ stages:
       size: 99799
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2020_10_22_trump_biden.txt
       hash: md5
@@ -2032,8 +2032,8 @@ stages:
       size: 109903
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2020_09_29_trump_biden.txt
       hash: md5
@@ -2053,8 +2053,8 @@ stages:
       size: 109903
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2020_09_29_trump_biden.txt
       hash: md5
@@ -2284,8 +2284,8 @@ stages:
       size: 94856
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2016_09_26_trump_clinton.txt
       hash: md5
@@ -2305,8 +2305,8 @@ stages:
       size: 90758
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2016_10_09_trump_clinton.txt
       hash: md5
@@ -2326,8 +2326,8 @@ stages:
       size: 94548
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2016_10_19_trump_clinton.txt
       hash: md5
@@ -2410,8 +2410,8 @@ stages:
       size: 94856
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2016_09_26_trump_clinton.txt
       hash: md5
@@ -2431,8 +2431,8 @@ stages:
       size: 90758
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2016_10_09_trump_clinton.txt
       hash: md5
@@ -2452,8 +2452,8 @@ stages:
       size: 94548
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2016_10_19_trump_clinton.txt
       hash: md5
@@ -2662,8 +2662,8 @@ stages:
       size: 88887
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2000_10_03_bush_gore.txt
       hash: md5
@@ -2683,8 +2683,8 @@ stages:
       size: 89155
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2000_10_11_bush_gore.txt
       hash: md5
@@ -2704,8 +2704,8 @@ stages:
       size: 84381
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2000_10_17_bush_gore.txt
       hash: md5
@@ -2725,8 +2725,8 @@ stages:
       size: 88887
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2000_10_03_bush_gore.txt
       hash: md5
@@ -2746,8 +2746,8 @@ stages:
       size: 89155
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2000_10_11_bush_gore.txt
       hash: md5
@@ -2767,8 +2767,8 @@ stages:
       size: 84381
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2000_10_17_bush_gore.txt
       hash: md5
@@ -2872,13 +2872,13 @@ stages:
       size: 84297
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 9d6cd5ad7066535a6f6b235664d84f24
-      size: 1356
+      md5: d1eb2c4585dd83e3e65dd023769d680e
+      size: 1389
     outs:
     - path: data/uniformed/2004_09_30_bush_kerry.txt
       hash: md5
-      md5: a46610ae2d81ff8f6ec7864edbf271e4
-      size: 84297
+      md5: 07177d9b032384afdfb9a7c615a8eccb
+      size: 83585
   remove_orphan_new_lines@2004_09_30_bush_kerry:
     cmd: python src/remove_orphan_new_lines.py --data data/uniformed/2004_09_30_bush_kerry.txt
       --dest data/no_orphan_lines/2004_09_30_bush_kerry.txt --metadata data/metadata/2004_09_30_bush_kerry.json
@@ -2889,17 +2889,17 @@ stages:
       size: 1593
     - path: data/uniformed/2004_09_30_bush_kerry.txt
       hash: md5
-      md5: a46610ae2d81ff8f6ec7864edbf271e4
-      size: 84297
+      md5: 07177d9b032384afdfb9a7c615a8eccb
+      size: 83585
     - path: src/remove_orphan_new_lines.py
       hash: md5
-      md5: 9ca0ef5f2f4811e451ac7d0daf93adf8
-      size: 1737
+      md5: 88d4aeea754ab74795c35a38336834c2
+      size: 1709
     outs:
     - path: data/no_orphan_lines/2004_09_30_bush_kerry.txt
       hash: md5
-      md5: e09323fcfdef2a28978daa4705726440
-      size: 84297
+      md5: 95a2af8441a81777e181888dd3e4b506
+      size: 83585
   split_candidate@2004_09_30_bush_kerry:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2004_09_30_bush_kerry.txt
       --dest data/speeches/2004_09_30_bush_kerry.json --metadata data/metadata/2004_09_30_bush_kerry.json
@@ -2910,8 +2910,8 @@ stages:
       size: 1593
     - path: data/no_orphan_lines/2004_09_30_bush_kerry.txt
       hash: md5
-      md5: e09323fcfdef2a28978daa4705726440
-      size: 84297
+      md5: 95a2af8441a81777e181888dd3e4b506
+      size: 83585
     - path: src/split_candidate.py
       hash: md5
       md5: 62c185a241bbbdd87eb96592ee08bc34
@@ -2919,5 +2919,5 @@ stages:
     outs:
     - path: data/speeches/2004_09_30_bush_kerry.json
       hash: md5
-      md5: e5e6167848b49c597bb87731d5692a93
-      size: 1882
+      md5: 2f0041b7cdd8adfffc24c026d5bc6461
+      size: 76101
