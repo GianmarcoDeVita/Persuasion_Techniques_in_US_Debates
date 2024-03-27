@@ -1,5 +1,5 @@
-/raw
-/metadata
-/no_orphan_lines
-/speeches
-/without_topics
+/raw/*
+/metadata/*
+/no_orphan_lines/*
+/speeches/*
+/without_topics/*
