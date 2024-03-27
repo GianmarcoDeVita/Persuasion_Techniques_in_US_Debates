@@ -1948,8 +1948,8 @@ stages:
       size: 99799
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2020_10_22_trump_biden.txt
       hash: md5
@@ -2032,8 +2032,8 @@ stages:
       size: 109903
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2020_09_29_trump_biden.txt
       hash: md5
@@ -2305,8 +2305,8 @@ stages:
       size: 90758
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2016_10_09_trump_clinton.txt
       hash: md5
@@ -2326,8 +2326,8 @@ stages:
       size: 94548
     - path: src/uniform_candidate_names.py
       hash: md5
-      md5: 4780b83e79c9ac3d1ce34f84f96a99de
-      size: 1344
+      md5: 9d6cd5ad7066535a6f6b235664d84f24
+      size: 1356
     outs:
     - path: data/uniformed/2016_10_19_trump_clinton.txt
       hash: md5
