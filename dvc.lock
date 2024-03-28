@@ -2234,8 +2234,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 0e17c3afb72607c7e351ab3ec3c46580
+      size: 2586
     - path: data/without_topics/2012_10_16_romney_obama.txt
       hash: md5
       md5: 985b41138ad93b7f9f33ac13359007dc
@@ -2360,8 +2360,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 0e17c3afb72607c7e351ab3ec3c46580
+      size: 2586
     - path: data/uniformed/2012_10_16_romney_obama.txt
       hash: md5
       md5: d3a05390c750e49c36603810c8651607
@@ -2486,8 +2486,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 0e17c3afb72607c7e351ab3ec3c46580
+      size: 2586
     - path: data/no_orphan_lines/2012_10_16_romney_obama.txt
       hash: md5
       md5: 64180e6c48e283587338c6e17894b0bb
@@ -3278,8 +3278,8 @@ stages:
     deps:
     - path: data/metadata/2008_09_26_mccain_obama.json
       hash: md5
-      md5: 8431c02bbbda39add5844ec6cc29823e
-      size: 967
+      md5: 4ada4add583289310d6eee272f4ef72c
+      size: 938
     - path: data/without_topics/2008_09_26_mccain_obama.txt
       hash: md5
       md5: c5178c32e4e49cde268f56036a95b232
@@ -3383,8 +3383,8 @@ stages:
     deps:
     - path: data/metadata/2008_09_26_mccain_obama.json
       hash: md5
-      md5: 8431c02bbbda39add5844ec6cc29823e
-      size: 967
+      md5: 4ada4add583289310d6eee272f4ef72c
+      size: 938
     - path: data/uniformed/2008_09_26_mccain_obama.txt
       hash: md5
       md5: c5178c32e4e49cde268f56036a95b232
@@ -3488,8 +3488,8 @@ stages:
     deps:
     - path: data/metadata/2008_09_26_mccain_obama.json
       hash: md5
-      md5: 8431c02bbbda39add5844ec6cc29823e
-      size: 967
+      md5: 4ada4add583289310d6eee272f4ef72c
+      size: 938
     - path: data/no_orphan_lines/2008_09_26_mccain_obama.txt
       hash: md5
       md5: 7dbf1ce9e78c96c43b2ceeb0e7a213c0
