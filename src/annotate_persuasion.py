@@ -18,6 +18,8 @@ def annotate_persuasion(opt):
     
     for candidate in data["candidates"]:
         text = candidate["text"]
+        if not env["GATE_CLOUD_ID"] or not  env["GATE_CLOUD_PASSWORD"]:
+            raise Exception("GATE_CLOUD_ID and GATE_CLOUD_PASSWORD must be set in .env file")
         response = requests.post(endpoint, data=text, auth=(env["GATE_CLOUD_ID"], env["GATE_CLOUD_PASSWORD"]), headers={"Content-Type": "text/plain", "Accept": "application/json"})
         candidate["annotations"] = response.json()
     

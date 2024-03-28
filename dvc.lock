@@ -2108,8 +2108,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 0e17c3afb72607c7e351ab3ec3c46580
-      size: 2586
+      md5: 61beb83a829592949bcfd6f44f18304b
+      size: 2572
     - path: data/raw/2012_10_16_romney_obama.txt
       hash: md5
       md5: 60d4ec3afecab4cda474726ef522ab2f
@@ -2931,13 +2931,13 @@ stages:
       size: 79622
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2000_10_03_bush_gore.json
       hash: md5
-      md5: 394421d68f0e1db59c1715ddfd29792e
-      size: 79906
+      md5: 1c2b0ed4fcad23adaf61fa6cc1b26123
+      size: 423825
   annotate_persuasion@2000_10_11_bush_gore:
     cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_11_bush_gore.json
       --dest data/annotated/2000_10_11_bush_gore.json
@@ -2948,13 +2948,13 @@ stages:
       size: 77258
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2000_10_11_bush_gore.json
       hash: md5
-      md5: f37757369e36a06f9c403ff8581ae363
-      size: 77542
+      md5: 89aaf2e8db19528f31b72f741835855f
+      size: 422162
   annotate_persuasion@2000_10_17_bush_gore:
     cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_17_bush_gore.json
       --dest data/annotated/2000_10_17_bush_gore.json
@@ -2965,13 +2965,13 @@ stages:
       size: 73552
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2000_10_17_bush_gore.json
       hash: md5
-      md5: f51334a417c0c2c1db87b6f87202b83a
-      size: 73836
+      md5: fcc63151164be63e20507b9d9c878517
+      size: 403072
   annotate_persuasion@2004_09_30_bush_kerry:
     cmd: python src/annotate_persuasion.py --data data/speeches/2004_09_30_bush_kerry.json
       --dest data/annotated/2004_09_30_bush_kerry.json
@@ -2982,13 +2982,13 @@ stages:
       size: 76101
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 1c479ea60b24b8d4ccdfa9f5b61482ed
-      size: 76385
+      md5: cae5039469960c761bbe2c87c4948299
+      size: 419807
   annotate_persuasion@2016_09_26_trump_clinton:
     cmd: python src/annotate_persuasion.py --data data/speeches/2016_09_26_trump_clinton.json
       --dest data/annotated/2016_09_26_trump_clinton.json
@@ -2999,13 +2999,13 @@ stages:
       size: 82952
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2016_09_26_trump_clinton.json
       hash: md5
-      md5: 499d04b07377514f4aa0884195aafbfe
-      size: 83236
+      md5: 43a4976cee370d3496f6a505872461c6
+      size: 515893
   annotate_persuasion@2016_10_09_trump_clinton:
     cmd: python src/annotate_persuasion.py --data data/speeches/2016_10_09_trump_clinton.json
       --dest data/annotated/2016_10_09_trump_clinton.json
@@ -3016,13 +3016,13 @@ stages:
       size: 75181
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2016_10_09_trump_clinton.json
       hash: md5
-      md5: e37e0cc247fb206055cb10e04e027ef6
-      size: 75465
+      md5: 440ec5e7d6839b31a4dabc7fa7dab2de
+      size: 462107
   annotate_persuasion@2016_10_19_trump_clinton:
     cmd: python src/annotate_persuasion.py --data data/speeches/2016_10_19_trump_clinton.json
       --dest data/annotated/2016_10_19_trump_clinton.json
@@ -3033,13 +3033,13 @@ stages:
       size: 75345
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2016_10_19_trump_clinton.json
       hash: md5
-      md5: b433f9f512e568b3f0cd1941ec767d2a
-      size: 75629
+      md5: 2ce821354b34b341fa5de8b2f0e2dcaa
+      size: 456860
   annotate_persuasion@2020_09_29_trump_biden:
     cmd: python src/annotate_persuasion.py --data data/speeches/2020_09_29_trump_biden.json
       --dest data/annotated/2020_09_29_trump_biden.json
@@ -3050,13 +3050,13 @@ stages:
       size: 78593
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2020_09_29_trump_biden.json
       hash: md5
-      md5: 20bbb5910d2eebb211cb1e3c91247976
-      size: 78877
+      md5: 8c40bf4aa2aabdde6a6a7f9f16facc2c
+      size: 621314
   annotate_persuasion@2020_10_22_trump_biden:
     cmd: python src/annotate_persuasion.py --data data/speeches/2020_10_22_trump_biden.json
       --dest data/annotated/2020_10_22_trump_biden.json
@@ -3067,13 +3067,13 @@ stages:
       size: 80038
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2020_10_22_trump_biden.json
       hash: md5
-      md5: 7cbf6f900ca0da509fb2a3b28c5a50a6
-      size: 80322
+      md5: 08360e9dd31de112fb067872af459d7a
+      size: 536034
   annotate_persuasion@2012_10_03_romney_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_03_romney_obama.json
       --dest data/annotated/2012_10_03_romney_obama.json
@@ -3084,13 +3084,13 @@ stages:
       size: 86858
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2012_10_03_romney_obama.json
       hash: md5
-      md5: c6d5549835e26594212aa5b619cb6d35
-      size: 87142
+      md5: 6c478e78ee5f2d6bdedd98153d2b8a89
+      size: 435460
   annotate_persuasion@2012_10_16_romney_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_16_romney_obama.json
       --dest data/annotated/2012_10_16_romney_obama.json
@@ -3101,13 +3101,13 @@ stages:
       size: 87134
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2012_10_16_romney_obama.json
       hash: md5
-      md5: 7fb25793764ab60fa883f316db4fdadc
-      size: 87418
+      md5: 6a8c01d38dfc6ccd9f037de95f51b68d
+      size: 444215
   annotate_persuasion@2012_10_22_romney_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_22_romney_obama.json
       --dest data/annotated/2012_10_22_romney_obama.json
@@ -3118,13 +3118,13 @@ stages:
       size: 87939
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2012_10_22_romney_obama.json
       hash: md5
-      md5: cc25571babdf83dc2b0dddfd1b0acd65
-      size: 88223
+      md5: 19021c39356b956c1363293c0c31b3e3
+      size: 438232
   remove_topics@2004_10_08_bush_kerry:
     cmd: python src/remove_topics.py --data data/raw/2004_10_08_bush_kerry.txt --dest
       data/without_topics/2004_10_08_bush_kerry.txt --metadata data/metadata/2004_10_08_bush_kerry.json
@@ -3173,8 +3173,8 @@ stages:
     deps:
     - path: data/metadata/2008_09_26_mccain_obama.json
       hash: md5
-      md5: 4ada4add583289310d6eee272f4ef72c
-      size: 938
+      md5: 8431c02bbbda39add5844ec6cc29823e
+      size: 967
     - path: data/raw/2008_09_26_mccain_obama.txt
       hash: md5
       md5: 72ecb02f219fd25d27bf3357e91817ea
@@ -3555,13 +3555,13 @@ stages:
       size: 78608
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 61798af5b45b95c910f0de8d2ad70c74
-      size: 78892
+      md5: 571cacc1aef3bc8211815ba9d2049a28
+      size: 444812
   annotate_persuasion@2004_10_13_bush_kerry:
     cmd: python src/annotate_persuasion.py --data data/speeches/2004_10_13_bush_kerry.json
       --dest data/annotated/2004_10_13_bush_kerry.json
@@ -3572,13 +3572,13 @@ stages:
       size: 74218
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2004_10_13_bush_kerry.json
       hash: md5
-      md5: 7831636e09e7b32d22c5c85a524f603c
-      size: 74502
+      md5: f099b754b17eec38384acfd6aaba67cf
+      size: 395358
   annotate_persuasion@2008_09_26_mccain_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2008_09_26_mccain_obama.json
       --dest data/annotated/2008_09_26_mccain_obama.json
@@ -3589,13 +3589,13 @@ stages:
       size: 83231
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2008_09_26_mccain_obama.json
       hash: md5
-      md5: 467244e4c45aa5f2c22912aa93aac7c8
-      size: 83515
+      md5: f373c3ebb1956404ef58e4c16821bbce
+      size: 423678
   annotate_persuasion@2008_10_07_mccain_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2008_10_07_mccain_obama.json
       --dest data/annotated/2008_10_07_mccain_obama.json
@@ -3606,13 +3606,13 @@ stages:
       size: 76439
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2008_10_07_mccain_obama.json
       hash: md5
-      md5: 41e1404210325fd895c3b81193d836d0
-      size: 76723
+      md5: 750b57aca15e595a829b98fe88cf8288
+      size: 396662
   annotate_persuasion@2008_10_15_mccain_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2008_10_15_mccain_obama.json
       --dest data/annotated/2008_10_15_mccain_obama.json
@@ -3623,10 +3623,10 @@ stages:
       size: 78947
     - path: src/annotate_persuasion.py
       hash: md5
-      md5: 24d6b665018c98a233559c493d80f78b
-      size: 1303
+      md5: eca5f2a228d2a27559d5b820313698f0
+      size: 1469
     outs:
     - path: data/annotated/2008_10_15_mccain_obama.json
       hash: md5
-      md5: 23f529647378b556190bfd292bc50c21
-      size: 79231
+      md5: 6596cc43c32d04c24385f61fe805fc3a
+      size: 397512
