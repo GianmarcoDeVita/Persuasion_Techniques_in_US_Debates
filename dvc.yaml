@@ -53,3 +53,12 @@ stages:
         - data/speeches/${item}.json
       outs:
         - data/annotated/${item}.json
+
+  merge_results:
+    cmd: python src/merge_results.py --source_folder data/annotated/ --dest data/results.csv --categories_file data/categories.json
+    deps:
+      - src/merge_results.py
+      - data/annotated/
+      - data/categories.json
+    outs:
+      - data/results.csv
