@@ -1,0 +1,25 @@
+{
+    "Appeal to Authority": "Justification",
+    "Appeal to values": "Justification",
+    "Appeal to fear/prejudice": "Justification",
+    "Flag Waving": "Justification",
+    "Causal oversimplification": "Simplification",
+    "False dilemma or no choice": "Simplification",
+    "Consequential oversimplification": "Simplification",
+    "Straw man": "Distraction",
+    "Red herring": "Distraction",
+    "Whataboutism": "Distraction",
+    "Slogans": "Call",
+    "Appeal to time": "Call",
+    "Conversation killer": "Call",
+    "Loaded language": "Manipulative wording",
+    "Repetition": "Manipulative wording",
+    "Exaggeration or minimisation": "Manipulative wording",
+    "Obfuscation - vagueness or confusion": "Manipulative wording",
+    "Name calling or labeling": "Attack on reputation",
+    "Doubt": "Attack on reputation",
+    "Guilt by association": "Attack on reputation",
+    "Appeal to Hypocrisy": "Attack on reputation",
+    "Questioning the reputation": "Attack on reputation"
+
+}
