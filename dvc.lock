@@ -2108,8 +2108,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 65c8fd88362c27884885a39857e445c5
+      size: 2578
     - path: data/raw/2012_10_16_romney_obama.txt
       hash: md5
       md5: 60d4ec3afecab4cda474726ef522ab2f
@@ -2234,8 +2234,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 65c8fd88362c27884885a39857e445c5
+      size: 2578
     - path: data/without_topics/2012_10_16_romney_obama.txt
       hash: md5
       md5: 985b41138ad93b7f9f33ac13359007dc
@@ -2360,8 +2360,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 65c8fd88362c27884885a39857e445c5
+      size: 2578
     - path: data/uniformed/2012_10_16_romney_obama.txt
       hash: md5
       md5: d3a05390c750e49c36603810c8651607
@@ -2486,8 +2486,8 @@ stages:
     deps:
     - path: data/metadata/2012_10_16_romney_obama.json
       hash: md5
-      md5: 61beb83a829592949bcfd6f44f18304b
-      size: 2572
+      md5: 65c8fd88362c27884885a39857e445c5
+      size: 2578
     - path: data/no_orphan_lines/2012_10_16_romney_obama.txt
       hash: md5
       md5: 64180e6c48e283587338c6e17894b0bb
@@ -2499,8 +2499,8 @@ stages:
     outs:
     - path: data/speeches/2012_10_16_romney_obama.json
       hash: md5
-      md5: 0945b0044a1294fea4b239ecf2a30513
-      size: 87134
+      md5: cc4bb247ac15aba5242d7248f6155770
+      size: 87140
   split_candidate@2012_10_22_romney_obama:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2012_10_22_romney_obama.txt
       --dest data/speeches/2012_10_22_romney_obama.json --metadata data/metadata/2012_10_22_romney_obama.json
@@ -3097,8 +3097,8 @@ stages:
     deps:
     - path: data/speeches/2012_10_16_romney_obama.json
       hash: md5
-      md5: 0945b0044a1294fea4b239ecf2a30513
-      size: 87134
+      md5: cc4bb247ac15aba5242d7248f6155770
+      size: 87140
     - path: src/annotate_persuasion.py
       hash: md5
       md5: eca5f2a228d2a27559d5b820313698f0
@@ -3106,8 +3106,8 @@ stages:
     outs:
     - path: data/annotated/2012_10_16_romney_obama.json
       hash: md5
-      md5: 6a8c01d38dfc6ccd9f037de95f51b68d
-      size: 444215
+      md5: 6e2a4c6b0bb87ca2418d703a7c4638f1
+      size: 444221
   annotate_persuasion@2012_10_22_romney_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2012_10_22_romney_obama.json
       --dest data/annotated/2012_10_22_romney_obama.json
@@ -3636,8 +3636,8 @@ stages:
     deps:
     - path: data/annotated/
       hash: md5
-      md5: cca609a0b0dff88df2c30d7498ada7f8.dir
-      size: 7637030
+      md5: 3cfd5398773c0f66f8d6173cc3a5d979.dir
+      size: 7637036
       nfiles: 18
     - path: data/categories.json
       hash: md5
@@ -3650,5 +3650,5 @@ stages:
     outs:
     - path: data/results.csv
       hash: md5
-      md5: bbc795ac25a25c91d1c27a98810d0b59
-      size: 2816992
+      md5: 9760e519f344c3dc1c1acb85a639d488
+      size: 2820016
