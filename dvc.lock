@@ -2843,7 +2843,7 @@ stages:
     deps:
     - path: data/metadata/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 4ac263f591d628bae91aae03430b57d2
+      md5: c15e0887324d6d3ec17f3ba4219485de
       size: 1593
     - path: data/raw/2004_09_30_bush_kerry.txt
       hash: md5
@@ -2864,7 +2864,7 @@ stages:
     deps:
     - path: data/metadata/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 4ac263f591d628bae91aae03430b57d2
+      md5: c15e0887324d6d3ec17f3ba4219485de
       size: 1593
     - path: data/without_topics/2004_09_30_bush_kerry.txt
       hash: md5
@@ -2885,7 +2885,7 @@ stages:
     deps:
     - path: data/metadata/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 4ac263f591d628bae91aae03430b57d2
+      md5: c15e0887324d6d3ec17f3ba4219485de
       size: 1593
     - path: data/uniformed/2004_09_30_bush_kerry.txt
       hash: md5
@@ -2906,7 +2906,7 @@ stages:
     deps:
     - path: data/metadata/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 4ac263f591d628bae91aae03430b57d2
+      md5: c15e0887324d6d3ec17f3ba4219485de
       size: 1593
     - path: data/no_orphan_lines/2004_09_30_bush_kerry.txt
       hash: md5
@@ -2919,7 +2919,7 @@ stages:
     outs:
     - path: data/speeches/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 2f0041b7cdd8adfffc24c026d5bc6461
+      md5: f681a6d3e5def00303d237e4db7100d1
       size: 76101
   annotate_persuasion@2000_10_03_bush_gore:
     cmd: python src/annotate_persuasion.py --data data/speeches/2000_10_03_bush_gore.json
@@ -2978,7 +2978,7 @@ stages:
     deps:
     - path: data/speeches/2004_09_30_bush_kerry.json
       hash: md5
-      md5: 2f0041b7cdd8adfffc24c026d5bc6461
+      md5: f681a6d3e5def00303d237e4db7100d1
       size: 76101
     - path: src/annotate_persuasion.py
       hash: md5
@@ -2987,7 +2987,7 @@ stages:
     outs:
     - path: data/annotated/2004_09_30_bush_kerry.json
       hash: md5
-      md5: cae5039469960c761bbe2c87c4948299
+      md5: 8a43b081b21d4ec5bf0858e61d9ff8c1
       size: 419807
   annotate_persuasion@2016_09_26_trump_clinton:
     cmd: python src/annotate_persuasion.py --data data/speeches/2016_09_26_trump_clinton.json
@@ -3131,7 +3131,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      md5: 0650ff5017d2057be90f9f76d487a7f6
       size: 1823
     - path: data/raw/2004_10_08_bush_kerry.txt
       hash: md5
@@ -3152,7 +3152,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_13_bush_kerry.json
       hash: md5
-      md5: 01ccc394efdc27c34fe8109e23e23201
+      md5: e482c015f79c400bfd2d2caacbb6c6d0
       size: 1460
     - path: data/raw/2004_10_13_bush_kerry.txt
       hash: md5
@@ -3236,7 +3236,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      md5: 0650ff5017d2057be90f9f76d487a7f6
       size: 1823
     - path: data/without_topics/2004_10_08_bush_kerry.txt
       hash: md5
@@ -3257,7 +3257,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_13_bush_kerry.json
       hash: md5
-      md5: 01ccc394efdc27c34fe8109e23e23201
+      md5: e482c015f79c400bfd2d2caacbb6c6d0
       size: 1460
     - path: data/without_topics/2004_10_13_bush_kerry.txt
       hash: md5
@@ -3341,7 +3341,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      md5: 0650ff5017d2057be90f9f76d487a7f6
       size: 1823
     - path: data/uniformed/2004_10_08_bush_kerry.txt
       hash: md5
@@ -3362,7 +3362,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_13_bush_kerry.json
       hash: md5
-      md5: 01ccc394efdc27c34fe8109e23e23201
+      md5: e482c015f79c400bfd2d2caacbb6c6d0
       size: 1460
     - path: data/uniformed/2004_10_13_bush_kerry.txt
       hash: md5
@@ -3446,7 +3446,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 9ad0b7db0626f79c20bb6765322f93cd
+      md5: 0650ff5017d2057be90f9f76d487a7f6
       size: 1823
     - path: data/no_orphan_lines/2004_10_08_bush_kerry.txt
       hash: md5
@@ -3459,7 +3459,7 @@ stages:
     outs:
     - path: data/speeches/2004_10_08_bush_kerry.json
       hash: md5
-      md5: abb802c32109030f89e3efd089d8b9ca
+      md5: 1cfe5e6eec7640e3792283515b284457
       size: 78608
   split_candidate@2004_10_13_bush_kerry:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2004_10_13_bush_kerry.txt
@@ -3467,7 +3467,7 @@ stages:
     deps:
     - path: data/metadata/2004_10_13_bush_kerry.json
       hash: md5
-      md5: 01ccc394efdc27c34fe8109e23e23201
+      md5: e482c015f79c400bfd2d2caacbb6c6d0
       size: 1460
     - path: data/no_orphan_lines/2004_10_13_bush_kerry.txt
       hash: md5
@@ -3480,7 +3480,7 @@ stages:
     outs:
     - path: data/speeches/2004_10_13_bush_kerry.json
       hash: md5
-      md5: ab4ce9e87b901db47cc5e93a8b37583c
+      md5: d6b2988917789df4da9c51184653a3d6
       size: 74218
   split_candidate@2008_09_26_mccain_obama:
     cmd: python src/split_candidate.py --data data/no_orphan_lines/2008_09_26_mccain_obama.txt
@@ -3551,7 +3551,7 @@ stages:
     deps:
     - path: data/speeches/2004_10_08_bush_kerry.json
       hash: md5
-      md5: abb802c32109030f89e3efd089d8b9ca
+      md5: 1cfe5e6eec7640e3792283515b284457
       size: 78608
     - path: src/annotate_persuasion.py
       hash: md5
@@ -3560,7 +3560,7 @@ stages:
     outs:
     - path: data/annotated/2004_10_08_bush_kerry.json
       hash: md5
-      md5: 571cacc1aef3bc8211815ba9d2049a28
+      md5: d42ba4254d045157e4e1bf1f694f9196
       size: 444812
   annotate_persuasion@2004_10_13_bush_kerry:
     cmd: python src/annotate_persuasion.py --data data/speeches/2004_10_13_bush_kerry.json
@@ -3568,7 +3568,7 @@ stages:
     deps:
     - path: data/speeches/2004_10_13_bush_kerry.json
       hash: md5
-      md5: ab4ce9e87b901db47cc5e93a8b37583c
+      md5: d6b2988917789df4da9c51184653a3d6
       size: 74218
     - path: src/annotate_persuasion.py
       hash: md5
@@ -3577,7 +3577,7 @@ stages:
     outs:
     - path: data/annotated/2004_10_13_bush_kerry.json
       hash: md5
-      md5: f099b754b17eec38384acfd6aaba67cf
+      md5: 267e9394a9cf7d967a357bd2f6e36471
       size: 395358
   annotate_persuasion@2008_09_26_mccain_obama:
     cmd: python src/annotate_persuasion.py --data data/speeches/2008_09_26_mccain_obama.json
@@ -3636,7 +3636,7 @@ stages:
     deps:
     - path: data/annotated/
       hash: md5
-      md5: 3cfd5398773c0f66f8d6173cc3a5d979.dir
+      md5: d44f9329dcacfc95b783f29a76ae7912.dir
       size: 7637036
       nfiles: 18
     - path: data/categories.json
@@ -3650,5 +3650,5 @@ stages:
     outs:
     - path: data/results.csv
       hash: md5
-      md5: 9760e519f344c3dc1c1acb85a639d488
+      md5: 48f4f91d5d5b5a4e00d0cac3e1afd458
       size: 2820016
