@@ -16,3 +16,10 @@ speeches:
    - 2016_10_19_trump_clinton
    - 2020_09_29_trump_biden
    - 2020_10_22_trump_biden
+
+plots:
+   plots_folder: plots
+   percentage_plot_folder: percentage
+   count_plot_folder: count
+   single_plot: true
+   merged_plot: true

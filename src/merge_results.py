@@ -17,7 +17,7 @@ def merge_results(opt):
     #get all the json files in the source folder
     files = [f for f in os.listdir(opt.source_folder) if f.endswith('.json')]
     #create new dataframe
-    data = pd.DataFrame(columns=["year", "date","debate", "candidate", "party", "incumbent", "party_incumbent", "winner", "home_state", "persuasion_technique", "persuasion_technique_category", "starting_index","ending_index", "score"])
+    data = pd.DataFrame(columns=["year", "date","debate", "candidate", "party", "incumbent", "party_incumbent", "winner", "home_state", "persuasion_technique", "persuasion_technique_category", "persuasion_percentage_over_txt", "score"])
     #read all the json files
     for file in files:
         with open(opt.source_folder + file, 'r') as file:
@@ -26,6 +26,8 @@ def merge_results(opt):
                 for annotation_k, annotation_v in candidate["annotations"]["entities"].items():
                     for annotation in annotation_v:
                         key = unify_string_format(annotation_k)
+                        len_persuasion = annotation["indices"][1] - annotation["indices"][0]
+                        txt_len = len(candidate["text"])
                         row = {
                             "year": json_data["year"],
                             "date": json_data["date"],
@@ -39,11 +41,17 @@ def merge_results(opt):
                             "persuasion_technique": annotation_k,
                             "persuasion_technique_category": categories[key],
                             "annotations": candidate["annotations"],
-                            "starting_index": annotation["indices"][0],
-                            "ending_index": annotation["indices"][1],
+                            "persuasion_percentage_over_txt": len_persuasion/txt_len,
                             "score": annotation["score"]
                         }
                         data.loc[len(data)] = row
+                #add a column containing how many uniques debates there are in the year
+    data["debate_count"] = data.groupby("year")["debate"].transform("nunique")
+    data['date'] = pd.to_datetime(data['date'],format='%Y-%m-%d')
+ 
+    data.sort_values(by='date', inplace=True)
+
+
     #save output csv
     data.to_csv(opt.dest, index=False)
 

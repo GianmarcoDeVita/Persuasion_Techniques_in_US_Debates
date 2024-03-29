@@ -161,3 +161,7 @@ cython_debug/
 
 # Poetry
 /test_annotations
+
+.DS_Store
+.DS_Store?
+**/.DS_Store

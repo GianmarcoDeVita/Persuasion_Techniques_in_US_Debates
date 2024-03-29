@@ -3645,10 +3645,88 @@ stages:
       size: 1039
     - path: src/merge_results.py
       hash: md5
-      md5: 1014f29f3fdb966d8616bb702027147c
-      size: 3055
+      md5: f96f5fdf6ac405b4cd7f3083f3800a1a
+      size: 3433
     outs:
     - path: data/results.csv
       hash: md5
-      md5: 48f4f91d5d5b5a4e00d0cac3e1afd458
-      size: 2820016
+      md5: 797f288b8940cd145ba2273df389864d
+      size: 3059537
+  persuasions_over_year:
+    cmd: python src/plot_scripts/persuasions_over_year.py --data data/results.csv
+      --params params.yaml
+    deps:
+    - path: data/results.csv
+      hash: md5
+      md5: 797f288b8940cd145ba2273df389864d
+      size: 3059537
+    - path: src/plot_scripts/persuasions_over_year.py
+      hash: md5
+      md5: 2da3125e6aa92c3d9c0cf4392300ab49
+      size: 4460
+    params:
+      params.yaml:
+        plots:
+          plots_folder: plots
+          percentage_plot_folder: percentage
+          count_plot_folder: count
+          single_plot: true
+          merged_plot: true
+    outs:
+    - path: plots/persuasions_over_year
+      hash: md5
+      md5: 1f149772c1ec13091f188624eaa84fa1.dir
+      size: 388576
+      nfiles: 6
+  recourse_to_technique_over_year:
+    cmd: python src/plot_scripts/recourse_to_technique_over_year.py --data data/results.csv
+      --params params.yaml
+    deps:
+    - path: data/results.csv
+      hash: md5
+      md5: 797f288b8940cd145ba2273df389864d
+      size: 3059537
+    - path: src/plot_scripts/recourse_to_technique_over_year.py
+      hash: md5
+      md5: bebacb4756b8e19371cba86760d8e57b
+      size: 5146
+    params:
+      params.yaml:
+        plots:
+          plots_folder: plots
+          percentage_plot_folder: percentage
+          count_plot_folder: count
+          single_plot: true
+          merged_plot: true
+    outs:
+    - path: plots/recourse_to_technique_over_year
+      hash: md5
+      md5: 5445f3d86a10d754d9145713e081e293.dir
+      size: 910749
+      nfiles: 14
+  recourse_to_technique_over_debates:
+    cmd: python src/plot_scripts/recourse_to_technique_over_debates.py --data data/results.csv
+      --params params.yaml
+    deps:
+    - path: data/results.csv
+      hash: md5
+      md5: 797f288b8940cd145ba2273df389864d
+      size: 3059537
+    - path: src/plot_scripts/recourse_to_technique_over_debates.py
+      hash: md5
+      md5: c02b8b6853ee1b05fcff8ad48b8608bb
+      size: 5054
+    params:
+      params.yaml:
+        plots:
+          plots_folder: plots
+          percentage_plot_folder: percentage
+          count_plot_folder: count
+          single_plot: true
+          merged_plot: true
+    outs:
+    - path: plots/recourse_to_technique_over_debates
+      hash: md5
+      md5: 8d08ca674ab7abb255a5e9c5010532ac.dir
+      size: 2197646
+      nfiles: 14

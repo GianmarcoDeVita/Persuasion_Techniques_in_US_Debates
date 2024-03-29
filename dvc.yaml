@@ -62,3 +62,34 @@ stages:
       - data/categories.json
     outs:
       - data/results.csv
+
+  #plots
+  persuasions_over_year:
+    cmd: python src/plot_scripts/persuasions_over_year.py --data data/results.csv --params params.yaml
+    deps:
+      - src/plot_scripts/persuasions_over_year.py
+      - data/results.csv
+    outs:
+      - plots/persuasions_over_year
+    params:
+      - plots
+  
+  recourse_to_technique_over_year:
+    cmd: python src/plot_scripts/recourse_to_technique_over_year.py --data data/results.csv --params params.yaml
+    deps:
+      - src/plot_scripts/recourse_to_technique_over_year.py
+      - data/results.csv
+    outs:
+      - plots/recourse_to_technique_over_year
+    params:
+      - plots
+
+  recourse_to_technique_over_debates:
+    cmd: python src/plot_scripts/recourse_to_technique_over_debates.py --data data/results.csv --params params.yaml
+    deps:
+      - src/plot_scripts/recourse_to_technique_over_debates.py
+      - data/results.csv
+    outs:
+      - plots/recourse_to_technique_over_debates
+    params:
+      - plots

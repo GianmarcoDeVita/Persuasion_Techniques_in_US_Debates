@@ -13,6 +13,7 @@ requests = "^2.31.0"
 ipykernel = "^6.29.3"
 python-dotenv = "^1.0.1"
 pandas = "^2.2.1"
+seaborn = "^0.13.2"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.3"
