@@ -9,7 +9,14 @@ from nltk.corpus import stopwords
 def remove_stop_words(opt):
     nltk.download('stopwords')
     nltk.download('punkt')
+    additional_file = "data/additional_stop_words.txt"
+    #read additional stop words
+    with open(additional_file, 'r') as f:
+        additional_stop_words = set(map(lambda x:x.replace('"', '').strip(),','.join(f.read().splitlines()).split(',')))
     stop_words = set(stopwords.words('english'))
+
+    #add additional stop words to stop_words
+    stop_words = stop_words.union(additional_stop_words)
     dest_folder = opt.dest_folder
     #create folder if it does not exist
     os.makedirs(dest_folder, exist_ok=True)
@@ -40,7 +47,8 @@ def remove_stop_words(opt):
                 filtered_sentence = []
                 
                 for w in word_tokens:
-                    if w not in stop_words:
+                    #appen if w not in stop words and w is not a number
+                    if w not in stop_words and not w.isdigit() and not w.split(',')[-1].isdigit():
                         filtered_sentence.append(w)
 
                 results[party][debate] = " ".join(filtered_sentence)

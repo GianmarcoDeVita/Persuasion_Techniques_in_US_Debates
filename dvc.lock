@@ -3750,6 +3750,10 @@ stages:
   remove_stop_words:
     cmd: python src/remove_stop_words.py --data data/persuasion_files/ --dest data/persuasion_files_no_stop_words/
     deps:
+    - path: data/additional_stop_words.txt
+      hash: md5
+      md5: 9bef236eeb47507a72bbd4d411f9485a
+      size: 9778
     - path: data/persuasion_files/
       hash: md5
       md5: baeec35e15a3d4fe305919c6869df415.dir
@@ -3757,13 +3761,13 @@ stages:
       nfiles: 6
     - path: src/remove_stop_words.py
       hash: md5
-      md5: 8bfc9f99fcf56d2098b473fb70439370
-      size: 2268
+      md5: fe04a4a4aa821cdae18ac583df034a40
+      size: 2748
     outs:
     - path: data/persuasion_files_no_stop_words/
       hash: md5
-      md5: eabdebfca0d1ecab3eb5bb1d169cf33b.dir
-      size: 1179253
+      md5: f6984b17146938224373ff67c345946c.dir
+      size: 926631
       nfiles: 6
   get_tfidf:
     cmd: python src/get_tfidf.py --data data/persuasion_files_no_stop_words/ --dest
@@ -3771,16 +3775,20 @@ stages:
     deps:
     - path: data/persuasion_files_no_stop_words/
       hash: md5
-      md5: eabdebfca0d1ecab3eb5bb1d169cf33b.dir
-      size: 1179253
+      md5: f6984b17146938224373ff67c345946c.dir
+      size: 926631
       nfiles: 6
     - path: src/get_tfidf.py
       hash: md5
-      md5: 3d2e0cf6d0c6751c3e6e78e8ab296d4c
-      size: 1652
+      md5: cd15a1e2d671025cff7210b3cfa73c85
+      size: 2414
+    params:
+      params.yaml:
+        tfidf:
+          number_to_keep: 5
     outs:
     - path: data/tfidf/
       hash: md5
-      md5: ce1ab8475e109504758fb8cb099ccbf3.dir
-      size: 316448
+      md5: 3d39e0af32aec8845a0bbe5d13db2b68.dir
+      size: 6167
       nfiles: 6

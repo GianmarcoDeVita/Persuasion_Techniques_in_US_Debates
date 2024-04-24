@@ -1,0 +1,5 @@
+outs:
+- md5: 9bef236eeb47507a72bbd4d411f9485a
+  size: 9778
+  hash: md5
+  path: additional_stop_words.txt

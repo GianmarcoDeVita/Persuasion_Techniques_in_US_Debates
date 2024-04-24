@@ -76,6 +76,7 @@ stages:
     deps:
       - src/remove_stop_words.py
       - data/persuasion_files/
+      - data/additional_stop_words.txt
     outs:
       - data/persuasion_files_no_stop_words/
 
@@ -86,6 +87,8 @@ stages:
       - data/persuasion_files_no_stop_words/
     outs:
       - data/tfidf/
+    params:
+      - tfidf
 
   #plots
   persuasions_over_year:

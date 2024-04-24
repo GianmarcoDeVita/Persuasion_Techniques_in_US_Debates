@@ -23,3 +23,6 @@ plots:
    count_plot_folder: count
    single_plot: true
    merged_plot: true
+
+tfidf:
+   number_to_keep: 5

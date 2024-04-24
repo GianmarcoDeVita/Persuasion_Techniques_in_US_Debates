@@ -11,3 +11,4 @@
 /persuasion_files
 /persuasion_files_no_stop_words
 /tfidf
+/additional_stop_words.txt
