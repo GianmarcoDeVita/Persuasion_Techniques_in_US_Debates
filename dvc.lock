@@ -3645,21 +3645,21 @@ stages:
       size: 1039
     - path: src/merge_results.py
       hash: md5
-      md5: f96f5fdf6ac405b4cd7f3083f3800a1a
-      size: 3433
+      md5: 39f344acd485b4c5a4a6cb411725af98
+      size: 3722
     outs:
     - path: data/results.csv
       hash: md5
-      md5: 797f288b8940cd145ba2273df389864d
-      size: 3059537
+      md5: 9fbce43b786ec5c0a32aad08711bfdd9
+      size: 4966765
   persuasions_over_year:
     cmd: python src/plot_scripts/persuasions_over_year.py --data data/results.csv
       --params params.yaml
     deps:
     - path: data/results.csv
       hash: md5
-      md5: 797f288b8940cd145ba2273df389864d
-      size: 3059537
+      md5: 9fbce43b786ec5c0a32aad08711bfdd9
+      size: 4966765
     - path: src/plot_scripts/persuasions_over_year.py
       hash: md5
       md5: 2da3125e6aa92c3d9c0cf4392300ab49
@@ -3675,8 +3675,8 @@ stages:
     outs:
     - path: plots/persuasions_over_year
       hash: md5
-      md5: 1f149772c1ec13091f188624eaa84fa1.dir
-      size: 388576
+      md5: 8882d8f0d057972294e0c7435194d01d.dir
+      size: 389543
       nfiles: 6
   recourse_to_technique_over_year:
     cmd: python src/plot_scripts/recourse_to_technique_over_year.py --data data/results.csv
@@ -3684,12 +3684,12 @@ stages:
     deps:
     - path: data/results.csv
       hash: md5
-      md5: 797f288b8940cd145ba2273df389864d
-      size: 3059537
+      md5: 9fbce43b786ec5c0a32aad08711bfdd9
+      size: 4966765
     - path: src/plot_scripts/recourse_to_technique_over_year.py
       hash: md5
-      md5: bebacb4756b8e19371cba86760d8e57b
-      size: 5146
+      md5: 9dbf6e91ea0a3492147d31b31cc58560
+      size: 5418
     params:
       params.yaml:
         plots:
@@ -3701,8 +3701,8 @@ stages:
     outs:
     - path: plots/recourse_to_technique_over_year
       hash: md5
-      md5: 5445f3d86a10d754d9145713e081e293.dir
-      size: 910749
+      md5: b7773540847444872f3d6dfcbcd50056.dir
+      size: 442742
       nfiles: 14
   recourse_to_technique_over_debates:
     cmd: python src/plot_scripts/recourse_to_technique_over_debates.py --data data/results.csv
@@ -3710,12 +3710,12 @@ stages:
     deps:
     - path: data/results.csv
       hash: md5
-      md5: 797f288b8940cd145ba2273df389864d
-      size: 3059537
+      md5: 9fbce43b786ec5c0a32aad08711bfdd9
+      size: 4966765
     - path: src/plot_scripts/recourse_to_technique_over_debates.py
       hash: md5
-      md5: c02b8b6853ee1b05fcff8ad48b8608bb
-      size: 5054
+      md5: d2b2e443b1ee26f012c6bdaf50e742c0
+      size: 5503
     params:
       params.yaml:
         plots:
@@ -3727,6 +3727,60 @@ stages:
     outs:
     - path: plots/recourse_to_technique_over_debates
       hash: md5
-      md5: 8d08ca674ab7abb255a5e9c5010532ac.dir
-      size: 2197646
+      md5: d55f84b9be7fe7de415476f61cf7dde1.dir
+      size: 655215
       nfiles: 14
+  create_persuasion_files:
+    cmd: python src/create_persuasion_files.py --data data/results.csv --dest data/persuasion_files/
+    deps:
+    - path: data/results.csv
+      hash: md5
+      md5: 9fbce43b786ec5c0a32aad08711bfdd9
+      size: 4966765
+    - path: src/create_persuasion_files.py
+      hash: md5
+      md5: 9aac585a40a0c736e6df2d7c89eeedd3
+      size: 1770
+    outs:
+    - path: data/persuasion_files/
+      hash: md5
+      md5: baeec35e15a3d4fe305919c6869df415.dir
+      size: 1695915
+      nfiles: 6
+  remove_stop_words:
+    cmd: python src/remove_stop_words.py --data data/persuasion_files/ --dest data/persuasion_files_no_stop_words/
+    deps:
+    - path: data/persuasion_files/
+      hash: md5
+      md5: baeec35e15a3d4fe305919c6869df415.dir
+      size: 1695915
+      nfiles: 6
+    - path: src/remove_stop_words.py
+      hash: md5
+      md5: 8bfc9f99fcf56d2098b473fb70439370
+      size: 2268
+    outs:
+    - path: data/persuasion_files_no_stop_words/
+      hash: md5
+      md5: eabdebfca0d1ecab3eb5bb1d169cf33b.dir
+      size: 1179253
+      nfiles: 6
+  get_tfidf:
+    cmd: python src/get_tfidf.py --data data/persuasion_files_no_stop_words/ --dest
+      data/tfidf/
+    deps:
+    - path: data/persuasion_files_no_stop_words/
+      hash: md5
+      md5: eabdebfca0d1ecab3eb5bb1d169cf33b.dir
+      size: 1179253
+      nfiles: 6
+    - path: src/get_tfidf.py
+      hash: md5
+      md5: 3d2e0cf6d0c6751c3e6e78e8ab296d4c
+      size: 1652
+    outs:
+    - path: data/tfidf/
+      hash: md5
+      md5: ce1ab8475e109504758fb8cb099ccbf3.dir
+      size: 316448
+      nfiles: 6

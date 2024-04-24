@@ -14,11 +14,12 @@ def persuasion_over_year(opt,params):
     sns.set_theme(style="whitegrid")
     sns.color_palette("hls", 8)
     hue_order = ['Democrat', 'Republican']
-    hue_palette = {'Democrat': 'blue', 'Republican': 'red'}
+    hue_palette = {'Democrat': '#00AEF3', 'Republican': '#E81B23'}
+    df = df.rename(columns = {"party":"Party", "year":"Year"})
 
 
     if params["percentage_plot_folder"]:
-        plt.figure(figsize=(25, 15))
+        plt.figure(figsize=(16, 9))
         df["persuasion_percentage_over_txt"] = df["persuasion_percentage_over_txt"]/df["debate_count"]
 
         percentage_plots_folder = os.path.join(plots_folder, params["percentage_plot_folder"])
@@ -34,34 +35,36 @@ def persuasion_over_year(opt,params):
                 #create plot
                 #s = df_category['date'].value_counts(ascending=True)           # compute counts by class
 
-                ax = sns.barplot(x="year", y="persuasion_percentage_over_txt", hue = "party",data=df_category, estimator='sum', hue_order=hue_order, palette=hue_palette)
+                ax = sns.barplot(x="Year", y="persuasion_percentage_over_txt", hue = "Party",data=df_category, estimator='sum', hue_order=hue_order, palette=hue_palette)
                 #save plot
-                ax.set_title(category)
-                ax.set_xticklabels(ax.get_xticklabels(), rotation=30)
+                plt.legend(fontsize = "21")
 
-                ax.get_figure().savefig(os.path.join(percentage_plots_folder, "single_plots",category + ".png"))
+                ax.set_title(category)
+                ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+
+                ax.get_figure().savefig(os.path.join(percentage_plots_folder, "single_plots",category.replace(" ", "_") + ".eps"), transparent=True)
                 ax.get_figure().clear()
 
         if params["merged_plot"]:
             #create subplot in a grid 3x2 for every category
-            fig, axs = plt.subplots(3, 2, figsize=(45, 45))
+            fig, axs = plt.subplots(3, 2, figsize=(16*2, 9*3))
             #iterate over values of party
             for i, category in enumerate(df["persuasion_technique_category"].unique()):
                 #filter by party
                 df_category = df[df["persuasion_technique_category"] == category]
                 #create plot
 
-                ax = sns.barplot(x="year", y="persuasion_percentage_over_txt", hue = "party",data=df_category, estimator='sum', ax=axs[i//2, i%2], hue_order=hue_order, palette=hue_palette)
+                ax = sns.barplot(x="Year", y="persuasion_percentage_over_txt", hue = "Party",data=df_category, estimator='sum', ax=axs[i//2, i%2], hue_order=hue_order, palette=hue_palette)
                 #set title
                 ax.set_title(category)
-                ax.set_xticklabels(ax.get_xticklabels(), rotation=30)
+                ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
 
             #save plot
-            fig.savefig(os.path.join(percentage_plots_folder, "merged.png"))
+            fig.savefig(os.path.join(percentage_plots_folder, "merged.eps"), transparent=True)
             ax.get_figure().clear()
         
     if params["count_plot_folder"]:
-        plt.figure(figsize=(25, 15))
+        plt.figure(figsize=(16, 9))
 
         count_plots_folder = os.path.join(plots_folder, params["count_plot_folder"])
         os.makedirs(count_plots_folder, exist_ok=True)
@@ -75,30 +78,32 @@ def persuasion_over_year(opt,params):
                 df_category = df[df["persuasion_technique_category"] == category]
 
                 #create plot
-                ax = sns.countplot(x="year", hue = "party",data=df_category, hue_order=hue_order, palette=hue_palette)
+                ax = sns.countplot(x="Year", hue = "Party",data=df_category, hue_order=hue_order, palette=hue_palette)
                 #save plot
-                ax.set_title(category)
-                ax.set_xticklabels(ax.get_xticklabels(), rotation=30)
+                plt.legend(fontsize = "21")
 
-                ax.get_figure().savefig(os.path.join(count_plots_folder, "single_plots",category + ".png"))
+                ax.set_title(category)
+                ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+
+                ax.get_figure().savefig(os.path.join(count_plots_folder, "single_plots",category.replace(" ", "_") + ".eps"), transparent=True)
                 ax.get_figure().clear()
 
         if params["merged_plot"]:
             #create subplot in a grid 3x2 for every category
-            fig, axs = plt.subplots(3, 2, figsize=(45, 45))
+            fig, axs = plt.subplots(3, 2, figsize=(16*2, 9*3))
             #iterate over values of party
             for i, category in enumerate(df["persuasion_technique_category"].unique()):
                 #filter by party
                 df_category = df[df["persuasion_technique_category"] == category]
 
                 #create plot
-                ax = sns.countplot(x="year", hue = "party",data=df_category, ax=axs[i//2, i%2], hue_order=hue_order, palette=hue_palette)
+                ax = sns.countplot(x="Year", hue = "Party",data=df_category, ax=axs[i//2, i%2], hue_order=hue_order, palette=hue_palette)
                 #set title
                 ax.set_title(category)
-                ax.set_xticklabels(ax.get_xticklabels(), rotation=30)
+                ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
 
             #save plot
-            fig.savefig(os.path.join(count_plots_folder, "merged.png"))
+            fig.savefig(os.path.join(count_plots_folder, "merged.eps"), transparent=True)
             ax.get_figure().clear()
             
 

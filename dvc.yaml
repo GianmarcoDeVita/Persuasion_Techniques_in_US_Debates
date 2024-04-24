@@ -62,6 +62,30 @@ stages:
       - data/categories.json
     outs:
       - data/results.csv
+    
+  create_persuasion_files:
+    cmd: python src/create_persuasion_files.py --data data/results.csv --dest data/persuasion_files/
+    deps:
+      - src/create_persuasion_files.py
+      - data/results.csv
+    outs:
+      - data/persuasion_files/
+
+  remove_stop_words:
+    cmd: python src/remove_stop_words.py --data data/persuasion_files/ --dest data/persuasion_files_no_stop_words/
+    deps:
+      - src/remove_stop_words.py
+      - data/persuasion_files/
+    outs:
+      - data/persuasion_files_no_stop_words/
+
+  get_tfidf:
+    cmd: python src/get_tfidf.py --data data/persuasion_files_no_stop_words/ --dest data/tfidf/
+    deps:
+      - src/get_tfidf.py
+      - data/persuasion_files_no_stop_words/
+    outs:
+      - data/tfidf/
 
   #plots
   persuasions_over_year:

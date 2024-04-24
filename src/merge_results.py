@@ -17,7 +17,7 @@ def merge_results(opt):
     #get all the json files in the source folder
     files = [f for f in os.listdir(opt.source_folder) if f.endswith('.json')]
     #create new dataframe
-    data = pd.DataFrame(columns=["year", "date","debate", "candidate", "party", "incumbent", "party_incumbent", "winner", "home_state", "persuasion_technique", "persuasion_technique_category", "persuasion_percentage_over_txt", "score"])
+    data = pd.DataFrame(columns=["year", "date","debate", "candidate", "party", "incumbent", "party_incumbent", "winner", "home_state", "persuasion_technique", "persuasion_technique_category", "persuasion_percentage_over_txt", "score", "starting_index", "ending_index","text"])
     #read all the json files
     for file in files:
         with open(opt.source_folder + file, 'r') as file:
@@ -42,7 +42,10 @@ def merge_results(opt):
                             "persuasion_technique_category": categories[key],
                             "annotations": candidate["annotations"],
                             "persuasion_percentage_over_txt": len_persuasion/txt_len,
-                            "score": annotation["score"]
+                            "score": annotation["score"],
+                            "starting_index": annotation["indices"][0],
+                            "ending_index": annotation["indices"][1],
+                            "text": candidate["text"][annotation["indices"][0]:annotation["indices"][1]]
                         }
                         data.loc[len(data)] = row
                 #add a column containing how many uniques debates there are in the year
